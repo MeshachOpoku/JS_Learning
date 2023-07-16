@@ -1,0 +1,35 @@
+ //code 1[Refactoring]
+input=prompt("Enter one  letter");
+le=['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+ for(i=0;i<26;i++)
+{ bin=(le[i]==input)?1:0; console.log(bin);}
+//code 2
+food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
+input=prompt("Select an option"); check=0;
+for(i=0;i<food.length;i++){ check=(food[i]===food[input])?check:'false';};
+
+//code 3
+// Order food
+try{food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+console.log("Select an option");for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);};
+price=['100','40','70'];input=prompt("Select an option"); 
+console.log("\t You ordered "+food[input]+"\n" +"Price: "+price[input]+" cedis\n Thanks for ordering ");} 
+catch{ console.log("Error");}
+
+// code 4 tells us whether user request is found in food list .
+food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
+input=prompt("Select an option"); check=0;console.log("My input fooling is "+input); input=parseInt(input);
+for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';break;} else {'false';};}
+
+code5 food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
+input=prompt("Select an option"); check=0;console.log("My input fooling is "+input); input=parseInt(input);
+for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';console.log("Ordered food is found ");break;} else {'false';};}
+
+//code 6 
+input=prompt("Enter one  letter");
+le=['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+ for(i=0;i<26;i++)
+{ {bin=(le[i]==input)?1 :0;};console.log(bin);}
