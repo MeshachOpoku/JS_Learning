@@ -803,8 +803,8 @@ console.log("password"+1);
 ?Create program which enable learners  answer question?
 authenticate=(_name,_email)=>{  
 choice=prompt("Select anoption :\n 1.Show user details\n2.Skip"); 
-choice=(choice==1)?hand():  "Message";
-console.log(choice);
+choice=(choice==1)?hand():"Message";
+//console.log(choice);
 
 
 }
@@ -812,19 +812,30 @@ _name=prompt("Enter Name");
 _email=prompt("Enter Email");
 authenticate(_name,_email);
 
-hand=()=>{
+function hand(){
   console.log("Name: "+_name+"\nEmail: "+_email);
-choice_2=prompt("Choose a choice:\n1.Start Test\n2.Read [Bink]");
-  
-  if(choice_2==1)
+    option=prompt("Select an Option \n1.Start Test \n2.Read");
+  if(option==1)
   { 
+
 Q=["Convert 1000 in binary  form to decimal form","Binary number is made of up of how many number","Convert 1000 to hexadecimal"];
 ;A=[8,2,8];
- 
-console.log(" Hands On  Examination \n--------------------\nMore test . More Experience...: \nSubject :Programming Fundamentals \nSolve all question by providing only your answer")
+ learner=[];    score=0
+; correct=[];incorrect=[];
+ console.log(" Hands On  Examination \n--------------------\nMore test . More Experience... \nSubject :Programming Fundamentals \nSolve all question by providing only your answer")
+    ;
+  for(i=0,P=1;i<Q.length||P<Q.length-1;i++,P++)
+    {console.log(Q[i]); learner[i]=prompt("Respond to Question"+P);console.log(learner[i]);
+     if(A[i]==learner[i]){correct[i]='correct'; score++}
+     else{incorrect[i]='Incorrect';}
+    
+    if (i==Q.length-1){  
+  console.log("\nName:"+_name+"\nEmail:"+_email+"\nScore :"+score+"  out of "+Q.length
+);   
   ;}
-  else
-    {console.log("HandOn test will make changes soon");}
-
-
+    
+    else {};}
+    }
+ 
+  else{console.log("Mask");}
 }

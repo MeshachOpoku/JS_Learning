@@ -1,0 +1,62 @@
+Eloquent Javascript Takeway
+Language hide detail not enjoying.
+No need to specify how program jump back and forth but while or do for construct [loop] will..
+bit has to be put in chunk[values] to understand it.Vlues can number ,text  and other functions.
+Assuming where values take over computer storage then there is need to put some where to free space .
+Values of number eg 3
+number use  64 bits to  store particular number.Similarly, given 64 binary
+digits, is represented 10 raised to the power 64[That is 10^24] which is equals about 18 quintillion
+(an 18 with 18 zeros after it).Computer memory used to be much smaller, and people tended to use groups
+of 8 or 16 bits to represent their numbers.
+What about negative .bit can be used to store decimal number and nonwhole and even decimas point . These has to be represented.
+2.998e8 =2998 *[10 to the power 8] .This type of number has nbeen represented but taking 9 quadrillion (15 zeros) .So 9 quadrillion (15 zeros) goes  beyond 64 bit hence can not be represented.
+many numbers lose some precision when only 64 bits are available to store them.
+
+Operator s:
+ % is remainderb operator  4%2=0 ; 7%2=1
+  Arithmetic operation : use parentheses to escape if you donot know precendence of operators.
+Special numbers:
+Infinity is for large positive number while [-Infinity is for negative number].
+NaN  is also around and stands for 'Not a number'.
+String : 
+here text are in enclosed content in quote[double quote,single quote ,back tick to make text].
+eg `Hello`, 'Hello',"Hello"
+/*Assignment**/ greeting =`Hello` 
+Some character which cannot be put under quote should use backslash (\) 
+eg in='Fan \n Games';
+Another \' eg data= 'Akua's name is every where.'; console.log(data)/* output: Akua's name is every where.
+
+To display \ n as test it must be like this [\"\\n\"]
+eg sentence=" \\n\ is used in JS"; console.log(sentence)//output: \n is used in Javascript.
+eg /*code*/ sentence=" \"\\n\"  is here"; console.log(sentence);//output: "\n"  is here.
+
+String can not perfoerm calculation of any sort by can do contwentatio.JS sstrings uses 16 bits per string element.So some characters, such as many emoji, take
+up two “character positions” in JavaScript strings.
+example of concatenation 
+/*code*/
+concatText="Pen" + "is used in traditional school"; console.log(concatText);
+/*code*/
+news="Noon news" ; update=" is upcoming next"; console.log(news+update+"\nstay glued to your TV set");
+
+Expression eg can number or whatever. eg 22 or any word . Like  sentences humanns use so is it in programming .
+Semi-colon are need in Javascript.
+binding = variable;
+eg let HighTemperature="High";
+   let  LowTemperature="Low"
+  console.log(HighTemperature);
+  console.log(LowTemperature)
+
+Boolean
+Tenary 
+eg  console.log(false?1:0);
+
+Empty values carry no information eg null and undefined
+ 
+In binding a var is a keyword for declaring varible .
+Variable can contain numbers but number should not start any variable and should not contain any puntuation  mark.
+It  can contain dollar( $) and (_) underscore
+eg $payment=69.00;
+   _name="Kobi";
+
+Nan [Not a Number] is nonsensical computation and is the only thing which does equals itself.
+
