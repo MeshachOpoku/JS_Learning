@@ -839,3 +839,124 @@ Q=["Convert 1000 in binary  form to decimal form","Binary number is made of up o
  
   else{console.log("Mask");}
 }
+
+
+/Removing data from arr code
+//code 36
+q=[2,3,4,5,6,6];
+console.log("The main length of q arr"+q.length);
+for(i=q.length-1;i>=0;i--)
+{console.log(q.pop(-1));
+console.log(q)
+console.log("Length of aarr"+q.length)
+
+}
+if(q==""){console.log(" Array is ");}
+
+
+
+//code 37
+console.log(Math.min(2,4));
+
+// 38
+
+//code 38[96 days more]
+console.log(Math.max(2,4));
+
+
+// code 39[95 daya more] 
+
+number=Number(prompt("Hello , enter age"));
+console.log(number)
+
+
+//code 40 [94 days]
+function Queue (){
+collection=[];
+this.print=function(){console.log(collection);};
+this.enqueue=function(data){return collection.push(data);};
+this.dequeue=function(){ collection.shift();};
+this.front=function(){ return collection[0];}
+
+}
+
+b= new Queue();
+b.print();
+b.enqueue(9);
+b.enqueue(8);
+b.enqueue(7);
+b.print();
+b.dequeue()
+;b.front();
+
+
+//code 41 
+function Queue (){
+collection=[];
+this.print=function(){console.log(collection);};
+this.enqueue=function(data){return collection.push(data);};
+this.dequeue=function(){ return collection.shift()+"deleted"};
+this.front=function(){ return "First data :" +collection[0];}
+  
+this.size=function(){
+  return "Length of array is :"+collection.length;
+}
+
+}
+
+b= new Queue();
+b.print();
+b.enqueue(9);
+b.enqueue(8);
+b.enqueue(7);
+b.print();
+b.size();
+
+//code 42 [93 days more]
+ counter = function() {
+    let count = 0;
+    return function() {
+        return ++count;
+    }
+};
+
+ x = counter();
+ console.log("Buy ")
+for(i=0;i<5;i++){
+ console.log("price of Cassava GHC"+x());
+
+;};
+
+
+
+//code 43
+//arrow function
+short=(input1,input2)=> input1+input2;
+short(7,8);
+
+console.log(short)
+
+
+// code 44
+simplify=((a,b)=>a+b)(3,6,10)
+console.log(simplify)
+
+//code 45
+generate_multiplier_function = a => (b => isNaN(b) || !b ? a : a*=b);
+ five_multiples = generate_multiplier_function(5);
+console.log(five_multiples(1)); 
+five_multiples(3); 
+five_multiples(4);
+
+
+// code 46
+simplify=((...args)=>a+b)(3,6,10)
+console.log(simplify)
+
+
+//code 47
+theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNumber)) {
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+};
