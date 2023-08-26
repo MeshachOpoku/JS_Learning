@@ -960,3 +960,89 @@ if (!Number.isNaN(theNumber)) {
 console.log("Your number is the square root of " +
 theNumber * theNumber);
 };
+//code 48 [89 days]
+l=2;
+l=l+""+l;
+l=parseInt(l);
+beta=Number("l");
+alpha_l=~~l;
+reform_l=+l
+//Way of converting string to numbers 
+console.log(typeof l);
+console.log(typeof beta);
+console.log(typeof ~~l);
+console.log(alpha_l);
+console.log(typeof reform_l);
+console.log(l*1)
+//converting number string
+megaNumber=56;
+NewMegaNumber=megaNumber.toString();
+ChangeMegaNumber=''+megaNumber;
+reformMegaNumber=`${megaNumber}`;
+megaNumberEnhanced=megaNumber.toLocaleString();
+alteredMegaNumber=String(megaNumber);
+
+console.log(typeof NewMegaNumber);
+
+console.log(typeof ChangeMegaNumber);
+
+console.log(typeof reformMegaNumber);
+
+console.log(typeof megaNumberEnhanced);
+
+console.log(typeof alteredMegaNumber)
+
+
+   ?Trying classify values fro m user?
+     SocialMedia_follower_views=prompt("Enter the view on social media");
+     view=['small', 'Moderate', 'Huge'];
+     if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is" +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+   
+?Produce result only when input is number?
+SocialMedia_follower_views=Number(prompt("Enter the view on social media"));
+     view=['small', 'Moderate', 'Huge'];
+/*console.log(typeof SocialMedia_follower_views==true)
+console.log(parseInt(SocialMedia_follower_views))*/
+if(SocialMedia_follower_views)
+/* if a number it produce result else is letter .Output : Redo it*/
+    {if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is " +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+    }
+else{ console.log("Redo it ");}
+
+ //code refinement          
+==> Another approach:
+SocialMedia_follower_views=Number(prompt("Enter the view on social media"));
+     view=['small', 'Moderate', 'Huge'];//console.log(typeof SocialMedia_follower_views==true)
+//console.log(parseInt(SocialMedia_follower_views))
+if(-`${SocialMedia_follower_views}`)// if a number it produce result else nothing happen
+    {if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is " +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+    }
+
+
+
+           
+
+
+           
+?Solve : Using loop find 2 raised to power to  10 and later write is short version with no loop?
+
+           var answer=1;
+delta=2
+for (i=0;i<=9;i++)
+{
+  answer*=delta;
+}
+console.log(answer);
+console.log(2**10);// short version

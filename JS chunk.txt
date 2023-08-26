@@ -163,3 +163,26 @@ console.log(number)
 comment are ignored by computer.
 proper branch =Conditional Execution.
 statement in braces is block.
+
+if keyword is conditional 
+
+NB: var and let are different let do its work like const
+
+
+
+// Displaying from 1 to Millon is unworkable using console.log alone but can be possible with loop.
+
+for(i=1;i<=1000000;i++)
+{console.log(i+"/n");}
+
+Loop can for loop,while loop ,do while  and others
+These loop has parentheses ,statement and increment or decrement variable .Statement  maybe the condition that should be meet.
+
+//solve this :calculate the 2 raised to the power 10 uisng  loop?
+solution:
+var answer=2;
+for (i=0;i<=9;i++)
+{
+  answer*=answer;
+}
+console.log(answer); 
