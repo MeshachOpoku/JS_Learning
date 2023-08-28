@@ -1046,3 +1046,20 @@ for (i=0;i<=9;i++)
 }
 console.log(answer);
 console.log(2**10);// short version
+
+
+
+?Boolean games dicovered?
+/*double exclamation can change   state of boolen values while preserving variable originality.*/
+highTemp="true" ; lowTemp="talse"; 
+console.log(!!highTemp);// produce false
+console.log(!highTemp); // does not produce false in this state but 'true'
+
+console.log*(!!lowTemp)// produce true
+console.log(!lowTemp)// produce  still false 
+
+
+/* implementing use highTemp and lowTemp in application*/
+if(highTemp==true &&lowTemp==true){comsole.log("Is hot and temperature is increasing. Please exit this area");}
+else if(lowTemp==false  &&!!highTemp==false){console.log("Cooling .Please if condition is bad exit");}
+
