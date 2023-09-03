@@ -58,5 +58,89 @@ It  can contain dollar( $) and (_) underscore
 eg $payment=69.00;
    _name="Kobi";
 
-Nan [Not a Number] is nonsensical computation and is the only thing which does equals itself.
+Nan [Not a Number] is nonsensical computation and is the only thing which does equals itself.[day3]
+Day 4 [ 14/8/2023]
+1. {!== }or 2.{!===   }  The 2 check the the compared stated whether they are the same
+ eg for 1: console.log(""!==false) ;//output:true.
+        
+eg for 2 : console.log(""!===false) ;//output:false : they are not prescisely the same.
 
+
+
+Consider these 
+a {==}  b{===}
+eg console.log(""==false);//output:true
+   console.log(""===false)//output:false :[It means the two comparing statement are prescisely the same.]
+
+Boolean operators 
+NaN ,0, empty ,"" are counted as false while others a true.NB empty values carries no meanful info.
+eg console.log(""||"Meshach")//Output: Meshach
+
+ console.log(0||"Meshach")//Output: Meshach
+
+ console.log(NaN||"Meshach")
+
+
+other
+console.log(0||'!?')
+//output: !?
+
+The same goes for [false && X],
+which is false and will ignore X. This is called short-circuit evaluation
+
+Expression Vrs Statement Vrs Expression.
+Expression is a code that produces a value.
+Expression make up statement .
+Program is made of more statement.
+
+eg of program
+1;
+!1;
+
+Statement having effect to machine in order to change state to prduce something  hence is called side effect
+
+
+
+
+Semicolon end the sentences .
+binding ==variable; here we attach something but maybe not  stored  in the value
+eg: 
+ten=10; console.log(ten*ten)
+// 100 
+
+eg:
+mensahDebt=12;
+mensahDebt=mensahDebt-2;
+console.log(mensahDebt);
+//10
+
+one=1; two=2;
+console.log(one*two)
+//3 NB:[3 is stored in thin air]
+
+
+greeting="Good Morning ";
+name="Naa";
+console.log(greeting+ name);
+
+
+Binding or variable can any word except keyword.
+Number can be attached to binding or variable name  should   not start  number.
+Special or reserved words should be binding word
+[break case catch class const continue debugger default
+delete do else enum export extends false finally for
+function if implements import interface in instanceof let
+new package private protected public return static super
+switch this throw true try typeof var void while with yield
+]
+
+Collection of binding or variable  with its value is called environment.
+
+
+FUNCTION:is a piece of  program that is wrapped in value.egbinding prompt holds a function that shows a little dialog box that can take input.
+code :
+prompt("Enter passcode");
+
+Execeuting a function is called calling or invoking or applying .
+A function can be called by specifiying  name of function together with parentheses{()}
+eg addFunction(),displayResult();

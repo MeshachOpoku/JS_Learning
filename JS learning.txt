@@ -839,3 +839,22 @@ Q=["Convert 1000 in binary  form to decimal form","Binary number is made of up o
  
   else{console.log("Mask");}
 }
+
+
+/Removing data from arr code
+//code 36
+q=[2,3,4,5,6,6];
+console.log("The main length of q arr"+q.length);
+for(i=q.length-1;i>=0;i--)
+{console.log(q.pop(-1));
+console.log(q)
+console.log("Length of aarr"+q.length)
+
+}
+if(q==""){console.log(" Array is ");}
+
+
+
+
+
+
