@@ -856,6 +856,7 @@ if(q==""){console.log(" Array is ");}
 
 
 
+<<<<<<< HEAD
 
 /code 37
 square=function(x){ return x*x;}
@@ -1778,3 +1779,213 @@ days_left=[years_on_earth*days_in_a_year]-[days_lived];
 
 console.log("You have "+days_left+" days left to live on earth");
 console.log("Or you have "+[years_on_earth-current_age]+" to live");
+=======
+//code 37
+console.log(Math.min(2,4));
+
+// 38
+
+//code 38[96 days more]
+console.log(Math.max(2,4));
+
+
+// code 39[95 daya more] 
+
+number=Number(prompt("Hello , enter age"));
+console.log(number)
+
+
+//code 40 [94 days]
+function Queue (){
+collection=[];
+this.print=function(){console.log(collection);};
+this.enqueue=function(data){return collection.push(data);};
+this.dequeue=function(){ collection.shift();};
+this.front=function(){ return collection[0];}
+
+}
+
+b= new Queue();
+b.print();
+b.enqueue(9);
+b.enqueue(8);
+b.enqueue(7);
+b.print();
+b.dequeue()
+;b.front();
+
+
+//code 41 
+function Queue (){
+collection=[];
+this.print=function(){console.log(collection);};
+this.enqueue=function(data){return collection.push(data);};
+this.dequeue=function(){ return collection.shift()+"deleted"};
+this.front=function(){ return "First data :" +collection[0];}
+  
+this.size=function(){
+  return "Length of array is :"+collection.length;
+}
+
+}
+
+b= new Queue();
+b.print();
+b.enqueue(9);
+b.enqueue(8);
+b.enqueue(7);
+b.print();
+b.size();
+
+//code 42 [93 days more]
+ counter = function() {
+    let count = 0;
+    return function() {
+        return ++count;
+    }
+};
+
+ x = counter();
+ console.log("Buy ")
+for(i=0;i<5;i++){
+ console.log("price of Cassava GHC"+x());
+
+;};
+
+
+
+//code 43
+//arrow function
+short=(input1,input2)=> input1+input2;
+short(7,8);
+
+console.log(short)
+
+
+// code 44
+simplify=((a,b)=>a+b)(3,6,10)
+console.log(simplify)
+
+//code 45
+generate_multiplier_function = a => (b => isNaN(b) || !b ? a : a*=b);
+ five_multiples = generate_multiplier_function(5);
+console.log(five_multiples(1)); 
+five_multiples(3); 
+five_multiples(4);
+
+
+// code 46
+simplify=((...args)=>a+b)(3,6,10)
+console.log(simplify)
+
+
+//code 47
+theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNumber)) {
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+};
+//code 48 [89 days]
+l=2;
+l=l+""+l;
+l=parseInt(l);
+beta=Number("l");
+alpha_l=~~l;
+reform_l=+l
+//Way of converting string to numbers 
+console.log(typeof l);
+console.log(typeof beta);
+console.log(typeof ~~l);
+console.log(alpha_l);
+console.log(typeof reform_l);
+console.log(l*1)
+//converting number string
+megaNumber=56;
+NewMegaNumber=megaNumber.toString();
+ChangeMegaNumber=''+megaNumber;
+reformMegaNumber=`${megaNumber}`;
+megaNumberEnhanced=megaNumber.toLocaleString();
+alteredMegaNumber=String(megaNumber);
+
+console.log(typeof NewMegaNumber);
+
+console.log(typeof ChangeMegaNumber);
+
+console.log(typeof reformMegaNumber);
+
+console.log(typeof megaNumberEnhanced);
+
+console.log(typeof alteredMegaNumber)
+
+
+   ?Trying classify values fro m user?
+     SocialMedia_follower_views=prompt("Enter the view on social media");
+     view=['small', 'Moderate', 'Huge'];
+     if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is" +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+   
+?Produce result only when input is number?
+SocialMedia_follower_views=Number(prompt("Enter the view on social media"));
+     view=['small', 'Moderate', 'Huge'];
+/*console.log(typeof SocialMedia_follower_views==true)
+console.log(parseInt(SocialMedia_follower_views))*/
+if(SocialMedia_follower_views)
+/* if a number it produce result else is letter .Output : Redo it*/
+    {if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is " +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+    }
+else{ console.log("Redo it ");}
+
+ //code refinement          
+==> Another approach:
+SocialMedia_follower_views=Number(prompt("Enter the view on social media"));
+     view=['small', 'Moderate', 'Huge'];//console.log(typeof SocialMedia_follower_views==true)
+//console.log(parseInt(SocialMedia_follower_views))
+if(-`${SocialMedia_follower_views}`)// if a number it produce result else nothing happen
+    {if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is " +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+    }
+
+
+
+           
+
+
+           
+?Solve : Using loop find 2 raised to power to  10 and later write is short version with no loop?
+
+           var answer=1;
+delta=2
+for (i=0;i<=9;i++)
+{
+  answer*=delta;
+}
+console.log(answer);
+console.log(2**10);// short version
+
+
+
+?Boolean games dicovered?
+/*double exclamation can change   state of boolen values while preserving variable originality.*/
+highTemp="true" ; lowTemp="talse"; 
+console.log(!!highTemp);// produce false
+console.log(!highTemp); // does not produce false in this state but 'true'
+
+console.log*(!!lowTemp)// produce true
+console.log(!lowTemp)// produce  still false 
+
+
+/* implementing use highTemp and lowTemp in application*/
+if(highTemp==true &&lowTemp==true){comsole.log("Is hot and temperature is increasing. Please exit this area");}
+else if(lowTemp==false  &&!!highTemp==false){console.log("Cooling .Please if condition is bad exit");}
+
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d

@@ -1,6 +1,9 @@
+
+
 Eloquent Javascript Takeway
 Language hides details not enjoying .
 No need to specify how program jump back and forth but while or do for construct [loop] will..
+<<<<<<< HEAD
 bit has to be put in chunk[values] to understand it.Values can be number ,text  and other functions.
 Assuming where values take over computer storage then there is need to put some in free space .
 Values of number eg 3
@@ -10,6 +13,17 @@ digits, is represented 10 raised to the power 64[That is 10^64] which is equals 
 of 8 or 16 bits to represent their numbers.
 What about negative .bit can be used to store decimal number and nonwhole and even decimals point . These has to be represented.
 2.998e8 =2.998 *[10 to the power 8] .This type of number has been represented but taking 9 quadrillion (15 zeros) .So a number or value which goes  beyond 64 bit hence can not be represented.
+=======
+bit has to be put in chunk[values] to understand it.Values can number ,text  and other functions.
+Assuming where values take over computer storage then there is need to put some where to free space .
+Values of number eg 3
+number use  64 bits to  store particular number.Similarly, given 64 binary
+digits, is represented 10 raised to the power 64[That is 10^24] which is equals about 18 quintillion
+(18,446,744,073,709,552,000 or an 18 with 18 zeros after it).Computer memory used to be much smaller, and people tended to use groups
+of 8 or 16 bits to represent their numbers.
+What about negative bit can be used to store decimal number and nonwhole and even decimals point . These has to be represented.
+2.998e8 =2998 *[10 to the power 8] .This type of number has been represented but taking 9 quadrillion (15 zeros) .So 9 quadrillion (15 zeros) goes  beyond 64 bit hence can not be represented.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 many numbers lose some precision when only 64 bits are available to store them.
 
 Operator s:
@@ -24,14 +38,22 @@ eg `Hello`, 'Hello',"Hello"
 /*Assignment**/ greeting =`Hello` 
 Some character which cannot be put under quote should use backslash (\) 
 eg in='Fan \n Games';
+<<<<<<< HEAD
 Another \': 
  eg data= 'Akua\'s name is every where.'; console.log(data)/* output: Akua's name is every where.
+=======
+Another \' eg data= 'Akua\'s name is every where.'; console.log(data)/* output: Akua's name is every where.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 
 To display \ n as test it must be like this [\"\\n\"]
 eg sentence=" \\n\ is used in JS"; console.log(sentence)//output: \n is used in Javascript.
 eg /*code*/ sentence=" \"\\n\"  is here"; console.log(sentence);//output: "\n"  is here.
 
+<<<<<<< HEAD
 String can not be used to perform calculation of any sort but can do concatenation[Joing two or mor words.JS strings uses 16 bits per string element.So some characters, such as many emoji, take
+=======
+String can not perform calculation of any sort by can do concatenation.JS strings uses 16 bits per string element.So some characters, such as many emoji, take
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 up two “character positions” in JavaScript strings.
 example of concatenation 
 /*code*/
@@ -71,10 +93,17 @@ eg for 2 : console.log(""!===false) ;//output:false : they are not prescisely th
 Consider these 
 a {==}  b{===}
 eg console.log(""==false);//output:true
+<<<<<<< HEAD
    console.log(""===false)//output:false :[It means the two comparing statement are not prescisely the same.]
 
 Boolean operators 
 NaN ,0, empty ,"" are counted as false while others a true.NB empty values carries no meaningful info.
+=======
+   console.log(""===false)//output:false :[It means the two comparing statement are prescisely the same.]
+
+Boolean operators 
+NaN ,0, empty ,"" are counted as false while others a true.NB empty values carries no meanful info.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 eg console.log(""||"Meshach")//Output: Meshach
 
  console.log(0||"Meshach")//Output: Meshach
@@ -87,12 +116,18 @@ console.log(0||'!?')
 //output: !?
 
 The same goes for [false && X],
+<<<<<<< HEAD
 eg code
 console.log(false&&'X')
 /*Output:false*/
 which is false and will ignore X. This is called short-circuit evaluation
 
 Expression Vrs Statement Vrs Program.
+=======
+which is false and will ignore X. This is called short-circuit evaluation
+
+Expression Vrs Statement Vrs Expression.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 Expression is a code that produces a value.
 Expression make up statement .
 Program is made of more statement.
@@ -102,25 +137,44 @@ eg of program
 !1;
 
 Statement having effect to machine in order to change state to produce something  hence is called side effect.
+<<<<<<< HEAD
 
+=======
+egShowing a dialog box or writing text to the screen is a side effect.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 
 
 
 Semicolon end the sentences .
+<<<<<<< HEAD
 binding=variable; here we attach something but maybe not  stored  in the value
 eg: 
 ten=10; console.log(ten*ten);
+=======
+binding ==variable; here we attach something but maybe not  stored  in the value
+eg: 
+ten=10; console.log(ten*ten)
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 // 100 
 
 eg:
 mensahDebt=12;
+<<<<<<< HEAD
 
 console.log(mensahDebt-2);
+=======
+mensahDebt=mensahDebt-2;
+console.log(mensahDebt);
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 //10
 
 one=1; two=2;
 console.log(one*two)
+<<<<<<< HEAD
 //2 NB:[console logging 2 is stored in thin air because is produced from multiplication of one and two]
+=======
+//3 NB:[3 is stored in thin air]
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 
 
 greeting="Good Morning ";
@@ -128,9 +182,15 @@ name="Naa";
 console.log(greeting+ name);
 
 
+<<<<<<< HEAD
 Binding or variable can be any word except inbuilt keyword.
 Number can be attached to binding or variable name  should   not start  with number.
 Special or reserved words should not be a binding word
+=======
+Binding or variable can any word except keyword.
+Number can be attached to binding or variable name  should   not start  number.
+Special or reserved words should be binding word
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 [break case catch class const continue debugger default
 delete do else enum export extends false finally for
 function if implements import interface in instanceof let
@@ -141,6 +201,7 @@ switch this throw true try typeof var void while with yield
 Collection of binding or variable  with its value is called environment.
 
 
+<<<<<<< HEAD
 FUNCTION:is a piece of  program that is wrapped in value.eg binding prompt holds a function that shows a little dialog box that can take input.
 code :
 prompt("Enter passcode");
@@ -502,3 +563,52 @@ When these stack space become full ,the device will cry out saying "Out of stack
 
 "stack space is full" or "Too much recursion".
 A location where a computer stores this context is called the call stack*/
+=======
+FUNCTION:is a piece of  program that is wrapped in value.egbinding prompt holds a function that shows a little dialog box that can take input.
+Function eliminate repetition in program.
+code :
+prompt("Enter passcode");
+
+Execeuting a function is called calling or invoking or applying .
+A function can be called by specifiying  name of function together with parentheses{()}
+eg addFunction(),displayResult();
+function produces value.
+Days left :94
+Value passed into the parenthesis is called argument.
+Return values :When a function returns value.
+eg console.log(Math.max(5,3)) 
+
+console.log display something.
+writing text to screen  is side effects .
+If a function produces values then we say is returned.
+
+number=Number(prompt("Hello , enter age));
+console.log(number)
+
+comment are ignored by computer.
+proper branch =Conditional Execution.
+statement in braces is block.
+
+if keyword is conditional 
+
+NB: var and let are different let do its work like const
+
+
+
+// Displaying from 1 to Millon is unworkable using console.log alone but can be possible with loop.
+
+for(i=1;i<=1000000;i++)
+{console.log(i+"/n");}
+
+Loop can for loop,while loop ,do while  and others
+These loop has parentheses ,statement and increment or decrement variable .Statement  maybe the condition that should be meet.
+
+//solve this :calculate the 2 raised to the power 10 uisng  loop?
+solution:
+var answer=2;
+for (i=0;i<=9;i++)
+{
+  answer*=answer;
+}
+console.log(answer); 
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
