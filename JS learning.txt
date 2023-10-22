@@ -239,6 +239,7 @@ if(i==p++)
 { a[p]=b;}
 console.log(a);
 
+/*comment : in array 'a' why is a part empty because p is incremented hence one value is skip before the last element is added.*/
 
 /*2nd Refactoring*/
 a=[];b=[]
@@ -716,18 +717,18 @@ userPrice=[];
 for(i=0,p=1; i<totalRecords;i++,p++)
 {
 userName[i]=prompt("Enter name customer:"+p+":");
-userPrice==prompt("Enter price paid:\n")
+userPrice==prompt("Enter price paid:\n");
 
 
 
 }
-heading=()=>{ console.log('List of Payment Records')};
-
+heading=()=>{ console.log('List of Payment Records');};gap=()=>{console.log("\n");};
+heading ();
 for(a=0,n=1;a<totalRecords;a++)
-{ heading ();
+{  
 console.log("User"+n+":"+userName[a]);
-console.log("Price paid:"+":"+userName[a]);
-
+console.log("Price paid:"+":"+userName[a]);gap();
+n++;
 }
 
 
@@ -856,5 +857,924 @@ if(q==""){console.log(" Array is ");}
 
 
 
+/code 37
+square=function(x){ return x*x;}
+square(2);
+console.log(square(2));
 
 
+
+/code 38 
+makeNoise=function(){console.log("Boom!");}
+makeNoise();
+
+
+using function write code which calculate the a number raised to any power or exponent
+
+cal=function(base,power)
+{ outcome=1;
+for(start=0;start<power;start++)
+{ outcome*=base;};
+ return "Answer :"+
+outcome;
+}
+;
+
+console.log(cal(3,4));
+cal(4,6);
+/*output: Answer : 81
+  'Answer :4096';
+/*alternative to cal */
+cal=function(base,power){ console.log(base**power);};
+cal(4,3);
+
+?* Giving user ability to do calculation of base and power*?
+ 
+cal=(base,power)=>{console.log("Answer is:"+base**power);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power);
+/Refactoring cal code */
+cal=(b,p)=>{console.log("Answer is:"+b**p);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power)
+/*Creating pomodoro shape*/
+pomodoro=function(){for(i=0;i<20;)
+{ 
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{ gap="    ";console.log(gap+"----");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+   
+  ;i++
+};
+ }; pomodoro();
+
+
+/code  :
+/*Display a shape*/
+miniShape=function (){
+for(i=1;i<=3;)
+{ if(i==1){console.log("----------");}
+  else if(i==2){gap="    ";console.log(gap+"---");}
+  else {console.log("----------");};
+ i++;
+}
+;}
+
+miniShape()
+
+?Printing from 1 to 100 except numbers divisible by two and for number divisible by 3 print or display 'Fuzz'?
+for(i=0;i<=100;i++)
+{  if(i%2!==0)
+  { 
+      if(i%3===0)
+        {  if(i%3===0||i%5===0)
+                {console.log("FizzBuzz");};
+                console.log("Fuzz");
+                }
+   
+     else{
+          if(i%5===0){ 
+                  if(i%3===0||i%5===0)
+                   {console.log("FizzBuzz");};
+                    console.log("Buzz");
+                   }
+
+          else{  console.log(i);}
+         }
+
+  };
+
+}
+
+?Chess game reation*?
+p='x';ga="  ";diagram=p+ga+p+ga+p+ga+p;                        
+for(z=1;z<=8;z++)
+{                                        
+                                                           
+    if(z%2!==0)                                                   
+    { console.log("  "+diagram);}
+    else { ;console.log(diagram);}     ;
+}
+/*Some control on a chess game*/
+p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+?ability of user to change width and length of chess board?
+/*code z stage*/
+ var collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   console.log(collectAll);
+                   } 
+              };
+input=prompt("Enter width of chess game");
+width(input-1);
+
+/*code y stage */
+ collectAll='';;
+/*width function begins*/
+width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) /*any number from 1 up to infinity depends on your choice .*/
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+/*End the the width function */
+
+
+input=prompt("Enter width of chess game");/*collect input  for the width function*/
+width(input-1);/*Since the input will work in do while loop we decrement by one */
+
+
+/*combining zand y  for us we get x stage*/
+collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=gap+shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+
+input=prompt("Enter width of chess game");
+each=width(input-1);/each variable take up user requirement using width function and display it on each line.*/
+;/*p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; */ /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+
+
+/*More function renovation/*
+square =function (num){ return "Answer:"+ num*num;};
+square(8);
+/*Giving user ability to type choice of numbers in square a number*/
+square =function (num){ return "Answer:"+ num*num;}
+user_data=prompt("Calculate square of any number.\r\b\bEnter a number and get an answer.");
+square(user_data);
+
+/*code make noise function is like an alarm*/
+makeNoise =function(){console.log("Boom");}
+makeNoise();
+
+/*Notify us when visitor are in the house*/
+notify_me=function(){return " Visitor[s] entered the house";}
+notify_me();
+
+/*Alert alarm for police and ambulance*/
+carAlarm=function()
+{ console.log("Wawoo!");}
+carAlarm();
+/*User can given the sound for carAlarm to make*/
+carAlarm=function(fromUser)
+{ console.log(fromUser+"!");}
+;fromUser=prompt("Enter a sound for the car alarm");
+carAlarm(fromUser)
+
+
+
+/*power function: calculate any number raise to any power*/
+power=function(base,power){ soln=1;
+         for( ;power>-1;power--)
+         {  soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculating any number raised to positive power");
+ power(2,3);
+
+/*User can add their choice of number to program or user can add thier bit!*/
+
+ power_cal=function(base,power){ 
+          let soln=1;
+         for( ;power>-1;power--)
+         { soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power==prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+
+
+/*Refactoring the error from power_cal,It has some issues - found them and resolve them. Positive power can only work*/
+
+ /*power_cal=function(base,power){ 
+          soln=1;
+         for( ;power>-1;power++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+NB : Never increment  or decrement the needed number [which alt to remain stagnant ]when is compared with a number  */
+power_cal=function(base,power){ 
+          soln=1;
+         for(bstart=0 ;power>bstart;bstart++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+ 
+
+/*Refactoring code power_cal function accept both negative and positive powers*/
+
+power_cal=function(base,power){ 
+          soln=1;x=-1*power
+         if( (power/1)===x)
+            { for(bstart=0 ;power>bstart;bstart++)
+             { soln*=base;
+                console.log(soln);
+ 	       };
+            ;}
+         else
+         { x ;console.log(x);
+            for(bstart=0 ;x>bstart;bstart++)
+             { soln/=base;
+                console.log(soln);
+ 	       ;};
+          }
+           return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+
+/*Coding to verify gobal and local binding*?
+let x=9;
+if(true){ let s=2; var d=3;  console.log(x+s+d);};
+/*console.log(x+s); ===> :generate error why because s is defined with let and is a braces or parentheses hence local binding are not visible outside braces./;
+console.log(x+d);/* this side work even though is braces but we said if var is not in a function then is visible to all.*/
+
+
+/*Similar variable or bindings*/
+const halve=function(n){return "Answer:"+n/2;}
+let n=7;
+console.log(halve(n));
+
+
+/*Nesting function : puting one function in another!*/
+const improveSalary=function(increment)
+{
+    const salary=function(rate,time,name)
+    {  let amount=increment*rate*time;
+       console.log("Ananse E-commmerce Company\nCustomer Records:");
+    console.log(`${'Name :'+name} \n ${'Amount paid :'+amount}`);
+    }
+   salary(2,3,'Nam');
+  
+
+
+}
+
+;
+improveSalary(2);
+
+
+
+/*Code enhancement for improveSalary now called salary_Increment*/
+const salary_Increment=function(increment)
+{
+    const salary=function(rate,time,name)
+    {  let amount=increment*rate*time;        
+     ; console.log(`${"Name:Mr."+name}${"\nAmount for  your salary is:Ghc"+amount+".oo"}`);                 
+    }
+  
+    
+   salary(2,3,'Nam');
+  
+
+
+}
+
+;
+salary_Increment(3);
+
+/Buy a ticket be part of the program and win more product terms and condition exit*/
+ticket=function(free_reduction){               
+                benefit=function(name,location,phone_number,amount) {                                     
+                                                                  
+             result=free_reduction*amount;                                                                                            console.log(result+"You purchased ticket successfully!\n" +"You have won a nice notebook and airtime of ghc "+(amount-result-25));        
+                 ;}
+               ;   
+
+           benefit("Meshach","Boko",0541478368,100);
+;return "";
+}
+
+ticket(0.7);
+ticket(0.62);
+
+
+/*Refactoring the ticket function so users can input data*/
+ticket=function(free_reduction){               
+        benefit=function(name,location,free_reduction,phone_number,amount) {                                     
+                                                                  
+             result=free_reduction*amount;                                                                                                console.log(result+"You purchased ticket successfully!\n" +"You have won a nice notebook and airtime of ghc "+(amount-result-25));}        
+                 ;      
+                name=prompt("Enter name");
+                location=prompt("Enter location or digital address");
+                amount=100;        
+
+                benefit(name,location,amount);
+;return "";
+                              
+                              }
+
+ticket(0.7);
+
+
+
+/*Refactoring ticket*/
+ticket=function(free_reduction){               
+        benefit=function(name,location,free_reduction,phone_number,amount) {                                     
+                                                                  
+             result=free_reduction*amount;                                                                                                    console.log(result+"You purchased ticket successfully!\n" +
+"You have won a nice notebook and airtime of ghc "+(amount-result-25));}        
+                 ;      
+                name=prompt("Enter name");
+                location=prompt("Enter location or digital address");
+                amount=100;        
+
+                benefit(name,location,free_reduction,phone_number,amount);
+;return "";
+                              
+                              }
+
+ticket(0.7);
+
+/Removing data from arr code
+//code 36
+q=[2,3,4,5,6,6];
+console.log("The main length of q arr"+q.length);
+for(i=q.length-1;i>=0;i--)
+{console.log(q.pop(-1));
+console.log(q)
+console.log("Length of aarr"+q.length)
+
+}
+if(q==""){console.log(" Array is ");}
+
+
+
+
+/code 37
+square=function(x){ return x*x;}
+square(2);
+console.log(square(2));
+
+
+
+/code 38 
+makeNoise=function(){console.log("Boom!");}
+makeNoise();
+
+
+using function write code which calculate the a number raised to any power or exponent
+
+cal=function(base,power)
+{ outcome=1;
+for(start=0;start<power;start++)
+{ outcome*=base;};
+ return "Answer :"+
+outcome;
+}
+;
+
+console.log(cal(3,4));
+cal(4,6);
+/*output: Answer : 81
+  'Answer :4096';
+/*alternative to cal */
+cal=function(base,power){ console.log(base**power);};
+cal(4,3);
+
+?* Giving user ability to do calculation of base and power*?
+ 
+cal=(base,power)=>{console.log("Answer is:"+base**power);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power);
+/Refactoring cal code */
+cal=(b,p)=>{console.log("Answer is:"+b**p);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power)
+/*Creating pomodoro shape*/
+pomodoro=function(){for(i=0;i<20;)
+{ 
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{ gap="    ";console.log(gap+"----");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+   
+  ;i++
+};
+ }; pomodoro();
+
+
+/code  :
+/*Display a shape*/
+miniShape=function (){
+for(i=1;i<=3;)
+{ if(i==1){console.log("----------");}
+  else if(i==2){gap="    ";console.log(gap+"---");}
+  else {console.log("----------");};
+ i++;
+}
+;}
+
+miniShape()
+
+?Printing from 1 to 100 except numbers divisible by two and for number divisible by 3 print or display 'Fuzz'?
+for(i=0;i<=100;i++)
+{  if(i%2!==0)
+  { 
+      if(i%3===0)
+        {  if(i%3===0||i%5===0)
+                {console.log("FizzBuzz");};
+                console.log("Fuzz");
+                }
+   
+     else{
+          if(i%5===0){ 
+                  if(i%3===0||i%5===0)
+                   {console.log("FizzBuzz");};
+                    console.log("Buzz");
+                   }
+
+          else{  console.log(i);}
+         }
+
+  };
+
+}
+
+?Chess game reation*?
+p='x';ga="  ";diagram=p+ga+p+ga+p+ga+p;                        
+for(z=1;z<=8;z++)
+{                                        
+                                                           
+    if(z%2!==0)                                                   
+    { console.log("  "+diagram);}
+    else { ;console.log(diagram);}     ;
+}
+/*Some control on a chess game*/
+p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+?ability of user to change width and length of chess board?
+/*code z stage*/
+ var collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   console.log(collectAll);
+                   } 
+              };
+input=prompt("Enter width of chess game");
+width(input-1);
+
+/*code y stage */
+ collectAll='';;
+/*width function begins*/
+width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) /*any number from 1 up to infinity depends on your choice .*/
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+/*End the the width function */
+
+
+input=prompt("Enter width of chess game");/*collect input  for the width function*/
+width(input-1);/*Since the input will work in do while loop we decrement by one */
+
+
+/*combining zand y  for us we get x stage*/
+collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=gap+shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+
+input=prompt("Enter width of chess game");
+each=width(input-1);/each variable take up user requirement using width function and display it on each line.*/
+;/*p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; */ /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+
+
+/*More function renovation/*
+square =function (num){ return "Answer:"+ num*num;};
+square(8);
+/*Giving user ability to type choice of numbers in square a number*/
+square =function (num){ return "Answer:"+ num*num;}
+user_data=prompt("Calculate square of any number.\r\b\bEnter a number and get an answer.");
+square(user_data);
+
+/*code make noise function is like an alarm*/
+makeNoise =function(){console.log("Boom");}
+makeNoise();
+
+/*Notify us when visitor are in the house*/
+notify_me=function(){return " Visitor[s] entered the house";}
+notify_me();
+
+/*Alert alarm for police and ambulance*/
+carAlarm=function()
+{ console.log("Wawoo!");}
+carAlarm();
+/*User can given the sound for carAlarm to make*/
+carAlarm=function(fromUser)
+{ console.log(fromUser+"!");}
+;fromUser=prompt("Enter a sound for the car alarm");
+carAlarm(fromUser)
+
+
+
+/*power function: calculate any number raise to any power*/
+power=function(base,power){ soln=1;
+         for( ;power>-1;power--)
+         {  soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculating any number raised to positive power");
+ power(2,3);
+
+/*User can add their choice of number to program or user can add thier bit!*/
+
+ power_cal=function(base,power){ 
+          let soln=1;
+         for( ;power>-1;power--)
+         { soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power==prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+
+
+/*Refactoring the error from power_cal,It has some issues - found them and resolve them. Positive power can only work*/
+
+ /*power_cal=function(base,power){ 
+          soln=1;
+         for( ;power>-1;power++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+NB : Never increment  or decrement the needed number [which alt to remain stagnant ]when is compared with a number  */
+power_cal=function(base,power){ 
+          soln=1;
+         for(bstart=0 ;power>bstart;bstart++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+ 
+
+/*Refactoring code power_cal function accept both negative and positive powers*/
+
+power_cal=function(base,power){ 
+          soln=1;x=-1*power
+         if( (power/1)===x)
+            { for(bstart=0 ;power>bstart;bstart++)
+             { soln*=base;
+                console.log(soln);
+ 	       };
+            ;}
+         else
+         { x ;console.log(x);
+            for(bstart=0 ;x>bstart;bstart++)
+             { soln/=base;
+                console.log(soln);
+ 	       ;};
+          }
+           return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+/**Giving user owner the arge to add input*/
+salary=function(rate,productivity)
+{ let year=2023;
+  getSalary=function(time)
+  { let totalAmt=rate*time*productivity;
+  console.log(totalAmt+"ghana cedis");
+  }
+ 
+     if(year===2023){ getSalary(5);}
+}
+   
+  
+   rate=prompt("Enter the rate for this year");
+  productivity=prompt("Enter the productivity level for this year");
+ salary(rate,productivity);
+
+
+Values assign to function is like any other variable it can be kept constant or not .If is not constant it any thing can be assign to it.
+
+/*code*/
+tempRise=function(){ temperature.launch("Now");};                                                                                 if("safe"){tempRise=function(){/*Do not raise temperature maintain it*/;} ;}
+                                        
+ /*refactoring code without in built function launch [Note it will work]*/
+tempRise=function(){ temperature.launch("Now");};                                                                                 if("safe"){tempRise=function(){/*Do not raise temperature maintain it*/;} ;}
+
+  /*code */ 
+function sayHello(){ return "Hello";}
+    console.log(sayHello()+" Priscilla");
+
+/*Code:Future code */
+ console.log("Future says\""+future()+"\"");
+  function future(){ return "It is bright";}
+                              
+/* 
+Note: the future code works but please note the first part which is console.log code will start displaying 
+"Future says"  and later call or invoke function future() from beneath and display it. function declaration does not follow top-to-down approach  but works no matter whether the function is below or some where it can still call it and display them.
+The preceding code works, even though the function is defined below the code that uses it. Function declarations are not part of the regular top-to-bottom
+flow of control. They are conceptually moved to the top of their scope and can be used by all the code in that scope. This is sometimes useful because it offers
+the freedom to order code in a way that seems meaningful, without worrying
+about having to define all functions before they are used.
+
+*/
+
+Arrow function :
+eg 
+vin=()=>{return 'Hi';}
+;vin();
+
+/*using parameter in arrow function*/
+visa=(name)=>{return "Welcome! "+name+" has a visa .Thank you.";};
+visa();
+/*Output: Welcome! undefined has visa.Thank you.
+
+
+/*Code refactoring let's correct visa code above.*/
+visa=(name)=>{return "Welcome! "+name+" has a visa .Thank you.";};
+visa('Meshach'); 
+
+
+
+/*Eliminating braces in arrow function:
+eg 
+code :*/
+visa=name=>"Hello!"+name;
+  visa('Meshach');
+
+/*No curly bracket, no word 'return' should be added.*/
+/*Yes curly bracket, Yes word 'return' should be added.*/
+
+send=(pin)=>{return "It is sent.";};
+send("QP7");
+
+/*If no parameter is given to function please keep the parentheses  and curly brackets.
+eg:
+save=()=>{return "Saved!";};
+save();
+
+
+/*User can keep their records*/
+record=(name,location,orders)=>{
+   console.log("Client is nice to have you here!");
+rate=5;/*Each bag cost  5 in cedis*/
+Price_of_order=order*rate;
+console.log("Order is a success"+"\n Details:\nName :"+name+"\nOrder Price:"+Price_of_order+" cedis");
+
+};
+
+name=prompt("Enter your name .");
+locate=prompt("Enter your location or digital address");
+order=prompt("How bags of salt are you buying");
+ /*calling records function*/
+record(name,locate,order)
+
+/*Call stack*/
+function calls :[Records of where the program begun must be recorded and where it continue from must be known.]
+
+
+/*Code */
+
+function call(who){
+console.log("Calling..."+who);}
+ 
+call("Handsome");
+console.log("***");
+
+/*A function must know where it was called and keep that context at the time it called and  stores the context in a stack!
+When these stack space become full ,the device will cry out saying "Out of stack space" or"stack space is full" or  "Too much recursion".
+A location where a computer stores this context is called the call stack*/
+/*Error code code on the stack space*/
+function chicken() {
+return egg();
+}
+function egg() {
+return chicken();
+}
+console.log(chicken() + " came first
+
+/*Output: Error*/
+Chicken function call egg function and egg function will call chicken function and the same activity will occur till stack space is full.Error will pop up.*/
+
+/*code:it will produce an error*/
+function adult(){ return baby();}
+function baby(){return adult();}
+
+console.log(adult() +"give birth first");
+
+
+
+/*Creating a function using different function reation techniques*/
+function name_generator(city,pet)
+{
+ return "Name of music group could be: "+city+" "+pet+"band";
+}
+
+/*collecting  input */
+city=prompt("Enter the name of your city");
+pet=prompt("Enter a pet name");
+
+/*calling a function and passing an argument*/
+name_generator(city,pet);
+
+
+/*After eating at bar you want to know total bill and split among the members at a percentage*/
+
+console.log("Welcome to the tip calculator.");
+
+var total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+var each_pays=(total_bill/5)+(total_bill *percentage_share/100);
+console.log("Each person should pay :$"+each_pays);
+
+
+/*Update in bill code*/
+/*After eating at bar you want to know total bill and split among the members at a percentage*/
+Algorithm
+-Accept total bill 
+-how many people do want share your money for them
+-at what percentage do you want each to get
+-display
+=====> Problem javascript is is doing concatenation while want it to add.
+console.log("Welcome to the tip calculator.");
+
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+ var each_pays=total_bill+total_bill;
+  type(total);
+console.log("Each person should pay :$"+each_pays);
+/Code:Problem of the day :How may letter make my name?
+*/
+_name=prompt("Enter first name");
+console.log("First name is made of "+_name.length+" character[s]");
+
+
+/code:That tell how many days left for if will live for 90years if your current age is given.*/
+ 
+-accept current_age
+-work the numbers days the person has lived . so let call it days used or days lived.
+-find total days on earth if he or she live for 90years.
+-substract days used from the total
+
+sol:
+var days_in_a_year=365;
+var years_on_earth=90;
+console.log("Check the number of years to live");
+current_age=prompt("Enter your current age?");
+days_lived=current_age*365;
+days_left=[years_on_earth*days_in_a_year]-[days_lived];
+
+console.log("You have "+days_left+" days left to live on earth");
+console.log("Or you have "+[years_on_earth-current_age]+" to live");
