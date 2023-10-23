@@ -10,3 +10,8 @@ Day4: Stack call
 Day5: Using different function approach to create something!
 Day 6: Applying functions and scope in refactoring ticket.
  -Coding finding number of days left to die.
+
+ Converting string to number.Hmm Code listen to me.
+ Square bracket disturbed me in my calculation of total bill but is resolved.
+
+Day 7: Optional Argument:

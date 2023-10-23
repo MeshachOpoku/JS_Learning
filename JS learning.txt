@@ -25,7 +25,8 @@ for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';break
 
 code5 food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
 for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
-input=prompt("Select an option"); check=0;console.log("My input fooling is "+input); input=parseInt(input);
+input=prompt("Select an option"); check=
+0;console.log("My input fooling is "+input); input=parseInt(input);
 for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';console.log("Ordered food is found ");break;} else {'false';};}
 
 //code 6 
@@ -1746,23 +1747,27 @@ Algorithm
 -how many people do want share your money for them
 -at what percentage do you want each to get
 -display
-=====> Problem javascript is is doing concatenation while want it to add.
+=====> Problem :javascript is is doing concatenation while I want it to add numbers.
 console.log("Welcome to the tip calculator.");
 
 total_bill=prompt("What is the total bill for the food?");
 console.log("Total Bill:$"+total_bill);
 var _share_bill=prompt("How many people do  want share bill among");
 var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
- var each_pays=total_bill+total_bill;
+total_bill=parseInt(total_bill);
+ var each_pays=total_bill+[total_bill*12/100] ;/*total_bill=total_bill+1.12 ==>1.12 mean 100 percent plus 12 percen*/
   type(total);
 console.log("Each person should pay :$"+each_pays);
+
+
+===>
 /Code:Problem of the day :How may letter make my name?
 */
 _name=prompt("Enter first name");
 console.log("First name is made of "+_name.length+" character[s]");
 
 
-/code:That tell how many days left for if will live for 90years if your current age is given.*/
+/code:That tell how many days left for if we will live for 90years if your current age is given.*/
  
 -accept current_age
 -work the numbers days the person has lived . so let call it days used or days lived.
@@ -1989,3 +1994,120 @@ if(highTemp==true &&lowTemp==true){comsole.log("Is hot and temperature is increa
 else if(lowTemp==false  &&!!highTemp==false){console.log("Cooling .Please if condition is bad exit");}
 
 >>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+
+
+===>
+
+
+
+/*Problem solution: deleting bug [which I see it as precious gold] and adding parseInt to code to refine it.
+console.log("Welcome to the tip calculator.");*/
+
+/*
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+total_bill=parseInt(total_bill);
+ var each_pays=total_bill+[total_bill*12/100] ;/*total_bill=total_bill+1.12 ==>1.12 mean 100 percent plus 12 percen*/
+ 
+console.log("Each person should pay :$"+each_pays);/*Square can give error when in calculation.Smart up or eye up.
+*/
+
+
+
+/*Work cool but need more refactoring*/
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+total_bill=parseInt(total_bill);
+ var each_pays=(total_bill)+(total_bill*12/100) ;/*total_bill=total_bill+1.12 ==>1.12 mean 100 percent plus 12 percen*/
+console.log("Each person should pay :$"+each_pays);
+
+
+
+
+/*Using user percentage to calculate total bill.*/
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+total_bill=parseInt(total_bill);
+ var each_pays=total_bill+(total_bill*percentage_share/100) ;
+ 
+console.log("Each person should pay :$"+each_pays);
+
+
+/*Optional Argument:means not force in my sense*/
+function square_num(x){
+ return x*x;}
+square_num(4,false);
+
+/*Optional argument accept argument but the fumction after the call pick what it needs out of a range of argument.*/
+
+/*Do create more optional argument.Fun.Hmm,more optional argument ,too much is good */
+function save_doc(name,type,location,date){
+ console.log("File name:"+name+"."+type);}
+
+save_doc('Kwaku','pi');
+save_doc('Kwaku','mi');
+save_doc('Emo','xz')
+
+/*User can save any name for their file/*
+**To be continued...
+ function save_doc(name,type,location,date){
+ console.log("File name:"+name+"."+type);}
+
+/*accept user input */
+var name = prompt("Enter file name");
+var type = prompt("Enter file type");
+save_doc(name,type);
+
+/*The optional Argument takes or look at parameter and argument if it matches what there all have in common and use it to work in function.Those that have no values assigned them carry undefined values.*/
+
+function centimeter_to_meter(centi_data){
+console.log("Argument given to the function has "+centi_data+" value");
+result=centi_data*100;
+console.log("Answer:"+result);
+}
+
+centimeter_to_meter()/*	No argument is passed here meaning the function to be called will carry undefined and pass it to the function */
+
+/*function call minus*/
+function minus(a,b){
+if(b===undefined) return -a;
+else return a-b;   }
+
+/*calling the minus function*/
+console.log(minus(3));
+console.log(minus(5,7))
+/*remove comment to test code       minus(5,3);console.log(minus(5,7));*/
+
+
+/*Wonders of JS ,listen when argument is given then intend parameter assignment work not but when is not given intend parameter assignment work eg power in the code below:
+*/
+
+function square_num(base,power=2/*If the power is passed as argument the power=2 will be replaced by the argument .If not argument is given then the power becomes two*/ ){
+
+return "Answer:"+(base**power);
+
+}
+
+console.log(square_num(2));
+/*without power argument for function hence the default power will be 2*/
+
+console.log(square_num(2,3));
+/*It has a power argument passed as 3 so it replace the default 2 .Take over it and give an answer of 8*/
+
+
+/*No magic on console.log function*/
+console.log("C","O",2);
+
+
+console.log("Lim","=",5);
+
+/*User feels happy,  programmers are happy.Make  a nice compound*/
+var chemical_symbol=prompt("Enter chemical symbol of metal.");
+valency=prompt("What is the valency of"+chemical_symbol);
+console.log(chemical_symbol,"1","Cl",valency);

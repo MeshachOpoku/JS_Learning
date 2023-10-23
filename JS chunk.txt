@@ -612,3 +612,5 @@ for (i=0;i<=9;i++)
 }
 console.log(answer); 
 >>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+Option argument: here function take what is passed and needed in program.If you write an = operator after a parameter, followed by an expression, the
+value of that expression will replace the argument when it is not given.
