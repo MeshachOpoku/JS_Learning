@@ -2111,3 +2111,143 @@ console.log("Lim","=",5);
 var chemical_symbol=prompt("Enter chemical symbol of metal.");
 valency=prompt("What is the valency of"+chemical_symbol);
 console.log(chemical_symbol,"1","Cl",valency);
+
+
+Closure:
+function show(data){
+let local=data;
+return () => local;}
+
+try1=show(1);
+console.log(try1());
+
+
+/*New  closure*/
+function register (name){
+  let wel="Welcome to City Boys Academy";
+  let success="Registration is successfully.";
+  let identity=name;
+  return ()=> wel+"\n"+identity+"!\n"+success;
+ }
+
+doReg1=register("Nana");
+console.log(doReg1())
+doReg2=register("Kantanka");
+console.log(doReg2());
+ 
+
+
+
+/*Loan Algorithm using closure:Algorithm can allow to select an option of any closure  */
+function loan_code(saving_balance,no_of_month_saved,age){
+  if(saving_balance>1500&&no_of_month_saved>3)
+{  
+    Loan_Amount=0.50*savings*no_of_month_saved;
+
+}  
+  
+else 
+{ console.log("You don't qualify");}
+
+
+}
+
+
+loan_code(500,6,18);
+
+
+/* Loan Code on going .Hello World!*/
+function loan_code(no_of_month_saved,age){
+ customer={
+     id: [00,01,02,03]
+     name:['Meshach','Sandy','Queen'],
+     saving_balance:[0,11,02,03];
+     password:['v5$//','<<op','yyu','t565']
+
+          }
+ /*any data is compared with the records to verify and authenticate he or she is user in our sytem.*/
+ xid=prompt("Enter id");
+ xpass=prompt("Enter password");
+ 
+for(i=0;i<customer.name.length;i++)
+{
+ 
+     conditionid=if(xid===customer.id[xid])?True:False;
+     conditionpass=if(xpass===customer.pass[xid])?True:False;
+  console.log(conditionid);
+     
+ if(saving_balance[xid]>1500&&no_of_month_saved>3)
+{  
+    Loan_Amount=0.50*savings*no_of_month_saved;
+
+}  
+  
+else 
+{ console.log("You don't qualify");}
+
+
+}:}
+
+
+/*Current code upgrade loan_code*/
+function loan_code(no_of_month_saved,age){
+ customer={
+     id: [0,1,2,03],
+     name:['Meshach','Sandy','Queen'],
+     saving_balance:[0,11,02,03],
+     password:['v5','<<op','yyu','t565']
+
+          }
+ /*comment:any data is compared with the records to verify and authenticate he or she is user in our sytem.*/
+ xid=Number(prompt("Enter id"));
+ xpass=prompt("Enter password");
+ 
+
+ 
+     conditionid=(xid===customer.id[xid])?true:false;
+     /*conditionpass=if(xpass===customer.pass[xi])?True:False;*/
+ console.log(conditionid);
+     
+/* if(saving_balance[xid]>1500&&no_of_month_saved>3)
+{  
+    Loan_Amount=0.50*savings*no_of_month_saved;
+
+}  
+  
+else 
+{ console.log("You don't qualify");}
+
+*/
+ ;} loan_code(5,18)      
+
+
+/*Loan code Refactoring is done  :what has changed is quite tricky to see unless you have already learnt well*/
+  function loan_code(no_of_month_saved,age){
+ customer={
+     id: [0,1,2,03],
+     name:['Meshach','Sandy','Queen'],
+     saving_balance:[34045,22701,02,03],
+     password:['v5','<<op','yyu','t565']
+
+          }
+ /*comment:any data is compared with the records to verify and authenticate he or she is user in our sytem.*/
+ xid=Number(prompt("Enter id"));
+ xpass=prompt("Enter password");
+ 
+
+ 
+     conditionid=(xid===customer.id[xid])?true:false;
+     conditionpass=(xpass===customer.password[xid])?true:false;
+ console.log(conditionid);console.log(conditionpass);
+     
+ if(customer.saving_balance[xid]>1500&&no_of_month_saved>3&&conditionid===true&&conditionpass===true)
+{  
+    Loan_Amount=0.10*customer.saving_balance[xid]*no_of_month_saved;
+     console.log(Loan_Amount);
+}  
+  
+else 
+{ console.log("Please balance is less.You don't qualify");}
+
+
+ ;} loan_code(5,500)

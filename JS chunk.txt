@@ -614,3 +614,64 @@ console.log(answer);
 >>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
 Option argument: here function take what is passed and needed in program.If you write an = operator after a parameter, followed by an expression, the
 value of that expression will replace the argument when it is not given.
+
+
+Closure:
+eg
+creating a closure
+-bring word ==>function
+- add space and sound name
+-bring normal bracket [closing and  edning]
+-Opening curly bracket and
+-declare  variable and assigned or equate to parameter
+-add :return ()=> name of the variable declared and assigned.
+-closing curly bracktes.
+- equate a new_variable to the function together with parameter or no parameter.Closure always recreatelocal whenenver and console or print.
+eg: 
+function show(data){
+let local=data;
+return () => local;}
+
+try1=show(1);
+try2=show(2);
+console.log(try1());
+
+
+ In closure ,local bindings are created anew for every call, and different calls can’t trample on
+one another’s local bindings.
+This feature—being able to reference a specific instance of a local binding in
+an enclosing scope—is called closure.
+ A function that references bindings from
+local scopes around it is called a closure.
+This closure has some benefit  and creative solution
+
+
+/*Creating another closure*/
+
+function register (name){
+  let wel="Welcome to City Boys Academy";
+  let success="Registration is successfully";
+  let identity=name;
+  return ()=> identity;
+ }
+
+doReg1=register("Nana");
+console.log(doReg1())
+doReg2=register("Kantanka");
+console.log(doReg2());
+
+
+/Closure Update */
+
+function register (name){
+  let wel="Welcome to City Boys Academy";
+  let success="Registration is successfully";
+  let identity=name;
+  return ()=> wel+""+success+""+identity;
+ }
+
+doReg1=register("Nana");
+console.log(doReg1())
+doReg2=register("Kantanka");
+console.log(doReg2());
+
