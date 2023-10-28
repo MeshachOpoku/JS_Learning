@@ -2222,7 +2222,7 @@ else
 
 
 /*Loan code Refactoring is done  :what has changed is quite tricky to see unless you have already learnt well*/
-  function loan_code(no_of_month_saved,age){
+function loan_code(no_of_month_saved,age){
  customer={
      id: [0,1,2,03],
      name:['Meshach','Sandy','Queen'],
@@ -2240,14 +2240,72 @@ else
      conditionpass=(xpass===customer.password[xid])?true:false;
  console.log(conditionid);console.log(conditionpass);
      
- if(customer.saving_balance[xid]>1500&&no_of_month_saved>3&&conditionid===true&&conditionpass===true)
+ if(customer.saving_balance[xid]>1500&&no_of_month_saved>3&&conditionid===true&&conditionpass===true&&age>=18)
 {  
     Loan_Amount=0.10*customer.saving_balance[xid]*no_of_month_saved;
      console.log(Loan_Amount);
 }  
   
+else if(age<18){ console.log("Age is less than the age limit");}
+
+else if (conditionid!==true){ console.log("Incorrect ID is entered");}
+
+else if (conditionpass!==true){console.log("Incorrect password is entered");}
 else 
 { console.log("Please balance is less.You don't qualify");}
 
 
- ;} loan_code(5,500)
+ ;} loan_code(35,45)
+
+
+
+/*Closure creation*/
+function bringComma(Name){
+   console.log(Name.length);
+   
+/*take last three character in Meshach and display comma before the 3 characters*/
+ console.log(Name[4-7]);
+
+}
+start =bringComma("Meshach")
+
+/*Code of closure  :another way of doing closure */
+function multiplier(factor){
+  console.log("factor is:"+factor);
+  console.log("num is: "+num);
+ return  num=> num*factor;}
+
+twice=multiplier(2);
+console.log(twice(3));
+
+/*Note when any function is called an environment is created. when twice is called or invoked it's parameter will num which exist as  3 in thin air and then multiplier will be called right after  and it will parameter of 3 .When the multiplied it result in or bring an answer of : 6 .When called, the function body sees
+the environment in which it was created, not the environment in which it is
+called.
+In the example, multiplier is called and creates an environment in which its
+factor parameter is bound to 2. The function value it returns, which is stored
+in twice, remembers this environment. So when that is called, it multiplies its
+argument by 2.
+*/
+
+
+/*Magic closure*/
+function magic(spell){
+return doz=>doz+spell);
+}
+call_magic=magic("Meshach!");
+console.log(call_magic("It is magic."));
+
+/*Closure code:*/
+
+function power(exponent){
+return base =>base**exponent;
+}
+
+var base =prompt("Enter  your base");
+var exponent=prompt("Enter exponent");
+ 
+solve=power(exponent)
+console.log(solve(base));
+
+/*Look: the code is called or invoked .We used solve to call mirror of function[ of power function]
+ and it keep base in a state  and later progress to use power(exponent) to call function  in mirror of function in a particular form by keeping power .It later perform ==>base raised to the exponent and return answers.*/
