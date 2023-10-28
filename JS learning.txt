@@ -2308,4 +2308,4 @@ solve=power(exponent)
 console.log(solve(base));
 
 /*Look: the code is called or invoked .We used solve to call mirror of function[ of power function]
- and it keep base in a state  and later progress to use power(exponent) to call function  in mirror of function in a particular form by keeping power .It later perform ==>base raised to the exponent and return answers.*/
+ and it keep base in a state  and later progress to use power(exponent) to call function  in mirror of function in a particular form by keeping exponent .It later perform ==>base raised to the exponent and return answers.*/
