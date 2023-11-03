@@ -2309,3 +2309,173 @@ console.log(solve(base));
 
 /*Look: the code is called or invoked .We used solve to call mirror of function[ of power function]
  and it keep base in a state  and later progress to use power(exponent) to call function  in mirror of function in a particular form by keeping exponent .It later perform ==>base raised to the exponent and return answers.*/
+
+
+/*coding closure*/
+function multiplier(factor) {
+return number => number ;
+}
+let twice = multiplier(2);
+console.log(twice(5));
+
+
+/*closure :*/
+function select(input){
+return data=>data;
+}
+
+ just=select(4);
+ console.log(just(3));
+ /*just(2): comment*/;
+
+
+
+Recursion:
+function power(base ,exponent){
+if(exponent===0)
+{ return 1;}
+else 
+{ return base*power(base,exponent-1);}
+                             }
+console.log(power(2,4));
+
+
+/*The code or function is called several time hence recursion ,when is called then the base is multiplied with the other and is stored in a virtual space .The code immediately stop when exponent ===0;
+
+
+Closure which returns a an argument passed even if there is no parameter pre installed  for the function.
+function multiplier() {
+return number => number ;
+}
+let twice = multiplier();
+console.log(twice(5));
+/*Output: 5*/
+
+Even though two is passed in a multiplier but it will do anything since is not returned by what will show in this code is 5 only.
+function multiplier() {
+return number => number ;
+}
+let twice = multiplier(2);
+console.log(twice(5));
+
+/*Output:5*/
+function power(base, exponent) {
+if (exponent == 0) { console.log("Iam part of it");
+return 1;
+} else {console.log("Delta is "+delta);
+return base * power(base, delta=exponent - 1);
+}
+}
+console.log(power(2, 3));
+
+/*Output:
+Delta is 0
+Delta is 2
+Delta is 1
+Iam part of it
+ 8
+*/
+The program immediately above execute three times .
+Meaning when it started delta was zero in the beginning 
+,then later the else statement started working hence delta=exponent-1
+eg delta=3-1=2
+   later delta=2-1=1
+ but To get answer, is like this :when the function start working ,every time function is continuously recurring ,the base is kept  for three times in an unknown room  ,so it will be like [2*2*2]=8
+/Recursion Code:*/
+function findSolution(target) {
+  function find(current, history) {
+  if (current == target) {
+  return history;
+  } else if (current > target) {
+  return null;
+  } else {
+  return find(current + 5, `(${history} + 5)`) ||
+  find(current * 3, `(${history} * 3)`);
+  }
+   }
+  return find(1, "1");
+
+}
+console.log(findSolution(24));
+/Trivial and understaning is shallow but l like the word but .... that turn statement to our favour.The code later came with understanding when I look to understanding each part of program.Looking at the code  by understanding each component is character of a good programmer.*/
+
+
+Clear light is forming in the code :
+function findSolution(target) {
+function find(current, history) { console.log(current);
+if (current == target) {
+return history;
+} else if (current > target) { console.log("It passed chere");
+return null;
+} else { ;
+return find(current + 5, `(${history} + 5)`) ||
+find(current * 3, `(${history} * 3)`)||console.log("Pes"+current);
+}
+}
+return find(2, "1");
+}
+console.log(findSolution(24))
+
+/*Clearing the fog:
+2
+2+5=7
+7+5=12
+12+5=17
+17+5=22
+22+7=29
+29 is greater than than target 24 ,Code Remembers only 22 
+22*3=66
+66 is huge than target 24 ,it returns 
+back forth from 22 to 17.
+17*3=51
+51 is huge than target 24 so it return ,from 17 it goes back to 12.
+12*6=36
+We all know 36 is way massive than target 24,so it get back from 12 to 7.
+7*3=21 
+Since 21  is less than 24 it try adding 5 to 21.
+==>21+5=26.
+26 is bigger than 24, so fall to  21.
+21*3=63.
+Later from 21 which was used it fall back to 7  
+
+Nothing happen when is at 7 later it fall back to 2 .
+2*3= 6
+
+
+It restart again:
+6+5=11
+11+5=16
+16+5=21
+21+5=26
+
+26 is huge than 24 ,so it fall back from or retrace it steps from 26 to or back to 21.
+21*3=63.
+When that is done ,the algorithm retrace seeing that 63 is greater than 63 ,it falls from 21 to 16.
+Hence ,16*3=48.
+
+48 is bigger than 24 ,hence it clean 48  into a thin air and later move from 16 which in memory and jump to 11.
+11*33=33.
+ 
+33 is bigger than 24 ,hence it clean 33 into a thin air and later move from  11 to 6.
+6*3=18.
+
+
+Restart : 18 is less than 24 
+Hence 18+5=23.
+
+We confirm with our mind and heart ,23 is less than target 24, hence algorithm will add 5 to 23 making it 28.
+23+5=28.
+
+28 is greater than 24 ,so clean 28 into the thin air ,leaving  only 23 in the memory .
+It multiply 23 and 3 together.
+23*3=29.
+
+29 is way vast than 24 which the target in this code.
+29 is clean  into thin air leaving  18 in memory.
+18  is multiplied with 3 giving 54.
+18*3=54.
+   
+
+Leaving 54 which is clean into the air ,it move from 18 to 6, then it moves from 6  to 2 .
+
+*/

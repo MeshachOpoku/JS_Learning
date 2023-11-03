@@ -5,16 +5,20 @@ Day2 :Nesting of function and blocks.
       lexical scoping: local see local,all see global scopes.
       function declaration:
       eg:function sayHi(){}
-Day3 :Arrow function:
+Day3 :Arrow function:)
 Day4: Stack call
 Day5: Using different function approach to create something!
 Day 6: Applying functions and scope in refactoring ticket.
  -Coding finding number of days left to die.
 
  Converting string to number.Hmm Code listen to me.
- Square bracket disturbed me in my calculation of total bill but is resolved.
+ Square bracket disturbed me in my calculation of total 
 
 Day 7: Optional Argument:
 
 Day 8: Closure
-Day 9:
+Day 9: Recap on closure
+Day10: Magic closures
+Day 11: Closure & recursion
+Day12 :Recursion [Elegance or speed]
+Day 13: The recursion keep me in staying to understand.Dymestify the code ....Hmm my english ,what does it mean !

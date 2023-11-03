@@ -675,3 +675,32 @@ console.log(doReg1())
 doReg2=register("Kantanka");
 console.log(doReg2());
 
+/* A function that references bindings from
+local scopes around it is called a closure.They have  a local variable  within function*/
+creating another closure
+
+function multiplier(factor){
+ return  num=> num*factor;}
+
+twice=multiplier(2);
+console.log(twice(3));
+
+
+Recursion:
+A function that allow its self to be called is recursive.
+With recursion function can be written in different style.
+Recursion is 3 times slower to looping.
+Walking in loop is cheaper thsn calling function many time.
+Recursion bring into light elegance and speed.
+The programmer to make things better somtimes it needs to be many or convuloted.Deciding on whether to go elegance or speed is dependant on the programmer.Therefore, always start by writing something that’s correct and easy to understand. If you’re worried that it’s too slow—which it usually isn’t since
+most code simply isn’t executed often enough to take any significant amount
+of time—you can measure afterward and improve it if necessary.
+Recursion is not always just an inefficient alternative to looping. Some problems really are easier to solve with recursion than with loops.
+
+Wonders of Closure :function multiplier() {
+return number => number ;
+}
+let twice = multiplier();
+console.log(twice(5));
+
+/*Output: 5*/
