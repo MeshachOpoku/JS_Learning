@@ -704,3 +704,45 @@ let twice = multiplier();
 console.log(twice(5));
 
 /*Output: 5*/
+
+
+Growing function:
+ more code means more space for mistakes to
+hide and more material to read for people trying to understand the program.
+
+/*Write function that takes 
+Records of animal in a farm!
+Eg:
+007 Cow
+011 Chicken
+/*coding the function to do that*/
+code :
+function printFarmInventory(cows, chickens) {
+let cowString = String(cows);
+while (cowString.length < 3) {
+cowString = "0" + cowString;
+}
+console.log(`${cowString} Cows`);
+let chickenString = String(chickens);
+while (chickenString.length < 3) {
+chickenString = "0" + chickenString;
+}
+console.log(`${chickenString} Chickens`);
+}
+printFarmInventory(7, 11)
+
+
+/*Farm code: */
+function FarmInventory(cow,chicken){
+ cowString=String(cow);
+ if(cowString<3)
+ {cowString="0"+cowString;}
+ console.log("Cow"+cowString);
+       chickenString=String(chicken);
+ 
+  if(chickenString<3);
+{chickenString="0"+chickenString;}
+ console.log("Chickken"+chickenString);
+}
+
+FarmInventory(2,4);

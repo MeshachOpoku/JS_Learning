@@ -22,3 +22,16 @@ Day10: Magic closures
 Day 11: Closure & recursion
 Day12 :Recursion [Elegance or speed]
 Day 13: The recursion keep me in staying to understand.Dymestify the code ....Hmm my english ,what does it mean !
+Day 14: Pushed code  to github
+ Recursion
+Link for books:
+
+https://oceanofpdf.com/authors/alberto-montalesi/pdf-epub-the-complete-guide-to-modern-javascript-learn-everything-from-es2015-to-es2018-and-practice-with-more-than-50-quizzes-download/?id=001160131325 
+
+Growing function :
+more code, more errors hide.
+
+Day 15:
+ A code which work on cow and chicken in a farmer ,the code has to be refactored to add pig to inventory,let see how to extend the program.
+Growing a function in a balcony.
+Day 16:Growing function eg Farm_Inventory in the JS learning.txt has been completed successfully.Happy coding!

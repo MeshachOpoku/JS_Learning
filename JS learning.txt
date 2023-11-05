@@ -2479,3 +2479,103 @@ It multiply 23 and 3 together.
 Leaving 54 which is clean into the air ,it move from 18 to 6, then it moves from 6  to 2 .
 
 */
+
+/*Write function that takes 
+Records of animal in a farm!
+Eg:
+007 Cow
+011 Chicken
+/*coding the function to do that*/
+code :
+function printFarmInventory(cows, chickens) {
+let cowString = String(cows);
+while (cowString.length < 3) {
+cowString = "0" + cowString;
+}
+console.log(`${cowString} Cows`);
+let chickenString = String(chickens);
+while (chickenString.length < 3) {
+chickenString = "0" + chickenString;
+}
+console.log(`${chickenString} Chickens`);
+}
+printFarmInventory(7, 11)
+
+
+
+/*
+
+
+
+function Farm_Animal_Record(cows,chicken){
+let cowString=String(cows);
+while(cowString.length<3)
+{cowString="0"+cowString;}
+console.log(cowstring);
+}
+
+Farm_Animal_Record(4,3)
+
+
+
+
+/*Practice on adding zero before a num which is has length less 3*/
+function Farm_Animals_Records( chicken){
+let  chickenString=String(chicken);
+   while(chickenString.length<3)
+   { chickenString="0"+chickenString;}
+ console.log(chickenString);
+ }
+
+Farm_Animals_Records(1);
+
+
+/*Coding more .Keep going!*/
+function Animal_Record(cow,chicken){
+ let chickenString=String(chicken);
+  while(chickenString.length<3)
+  { chickenString="0"+chickenString;}
+   console.log(chickenString);
+  }
+Animal_Record(5,6);
+
+
+
+
+
+/*Write function that takes 
+Records of animal in a farm!
+Eg:
+007 Cow
+011 Chicken
+/*coding the function to do that*/
+code :
+function printFarmInventory(cows, chickens) {
+let cowString = String(cows);
+while (cowString.length < 3) {
+cowString = "0" + cowString;
+}
+console.log(`${cowString} Cows`);
+let chickenString = String(chickens);
+while (chickenString.length < 3) {
+chickenString = "0" + chickenString;
+}
+console.log(`${chickenString} Chickens`);
+}
+printFarmInventory(7, 11)
+
+
+/*Farm code: */
+function FarmInventory(cow,chicken){
+ cowString=String(cow);
+ if(cowString<3)
+ {cowString="0"+cowString;}
+ console.log(cowString);
+       chickenString=String(chicken);
+ 
+  if(chickenString<3);
+{chickenString="0"+chickenString;}
+ console.log(chickenString);
+}
+
+FarmInventory(2,4);
