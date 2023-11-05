@@ -2579,3 +2579,44 @@ function FarmInventory(cow,chicken){
 }
 
 FarmInventory(2,4);
+
+
+/*Growing function :
+Which is optimized to accept a number of animals of in the farm inventory records*/
+
+/*Zero_Print_Number_Label function  parameter carry number  and name or label of each organism.It will be called by a function farm_inventory  which has an argument of taking the quantity of each animal and passing it to  farm_inventory ,then the function Farm_Inventory work will call function Zero_Print_Number_Label (number,"label") */
+
+function Zero_Print_Number_Label(number,label){
+   numberString=String(number);
+   while(numberString<3)
+   { numberString="0"+numberString;}
+   console.log(numberString+""+label);
+   }
+
+function Farm_Inventory(no_ofCow,no_ofChicken,no_ofPig){
+  /*Zero_Print_Number_Label(number,label)*/
+  Zero_Print_Number_Label(no_ofCow,"Cow");
+  Zero_Print_Number_Label(no_ofChicken,"Chicken");
+  Zero_Print_Number_Label(no_ofPig,"Pig");}
+
+Farm_Inventory(3,5,9);
+
+
+
+/	Refactoring Code :Zero need to show before the quantity of each organism*/
+function Zero_Print_Number_Label(number,label){
+   numberString=String(number);
+   while(numberString.length<3)
+   { numberString="0"+numberString;}
+   /*You can uncomment the code below:*/
+   /*console.log(`${numberString} ${label}`)*/
+   console.log(numberString+" "+label);
+   }
+
+function Farm_Inventory(no_ofCow,no_ofChicken,no_ofPig){
+  /*Zero_Print_Number_Label(number,label)*/
+  Zero_Print_Number_Label(no_ofCow,"Cow");
+  Zero_Print_Number_Label(no_ofChicken,"Chicken");
+  Zero_Print_Number_Label(no_ofPig,"Pig");}
+
+Farm_Inventory(3,5,9);

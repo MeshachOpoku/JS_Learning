@@ -34,4 +34,5 @@ more code, more errors hide.
 Day 15:
  A code which work on cow and chicken in a farmer ,the code has to be refactored to add pig to inventory,let see how to extend the program.
 Growing a function in a balcony.
-Day 16:Growing function eg Farm_Inventory in the JS learning.txt has been completed successfully.Happy coding!
+
+Day 16: Growing a function
