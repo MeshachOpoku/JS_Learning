@@ -1,0 +1,103 @@
+
+
+Google Lead Club Program 
+Date: 21 st October 2023.
+A watch shown us how KNUST learners did navigation app on campus.
+
+Hacktoberfest:
+Open Source Project 
+By Digital Ocean
+hacktoberfest:
+In 2013 by Digital Ocean.
+Here contributing to open source.
+Open Source Software =Freeware Vs Open Source.
+Freeware: a software avail for free no source code is available.
+Open source =code is available  for all for modification.
+Free redistribution:can sell  even lengthy code.
+Source code:only code 
+Derived work:allow modification and distibute under same licenses.
+Integrity of the Author's source code:may restrict us  but may if is patch files source code modification.credit the author.
+No discrimination against persons or group:licences show no  discrimination.
+No discrimination against against fields of Endeavor : not restrict any field committed effort.
+Distribution license
+License must be for a particular project.
+License should restrict other software.
+License must be technological neutral :should be neutral to all.
+
+
+Reasons for open source:
+
+*Number and activity ,innovation and creativity:
+A lot of people are involved so smart ones make it better.eg chromium in google
+
+Open Source/:
+Maintainer -individuals or Org.[in eg goolge
+contributors:add code
+Donors eg fake.js download: [give money].
+Partners: facilitator make move in project eg Google may want to be partners
+License:govern the project
+
+Why contibute to Open Source :
+We all benefit.
+Networking &Opportunities: jobs ,mentorship
+Sharpen Your skills :git best pracitces-PR &commits
+Coding
+Improve open source software: fix bugs,add slick features,improve UX and documentation.
+
+What you can do'
+documentation works:adding bits to ... it
+user experience 
+Blog and Tutorials:made known contribution to others
+case studies;
+graphic design
+Translation 
+eg 23 sept and 31
+eg hacktoberfest
+
+issues:
+contibution to repo
+Project manager has to accept them 
+Be yond Fest:website
+MLH fellowship
+Outreachy
+Google Summer Of Code
+faddal Explained it nicely but other thing yet all the lead brush it off.
+
+
+Reading More: On Open Source:
+term of:
+Use 
+Modify
+Redistribute
+Bazaar model to open source:
+They say open source is not democratic.
+Out of 31999 programmers only 10% do write code for a repo or make contribution to project.Average is 5.1 with 2 being the median.
+Out of open Ray Eric think Bazaar model [Traditional like model]
+Some -tips of bazaar model
+*Make other co-developers
+*Early release
+*Automated integration
+*several versions
+*High modularzation:easy devt of each component.
+*Dynamic decision making structure.
+
+
+Benefit of open source:
+*More collaboration
+*Better soft than proprietary software
+*More flexible
+*Innovation plus creativity
+*Low cost
+*Easy access to software
+*Startup are more
+*Company may break but code exist
+
+Free software pay more atttention to customers and with time the software decay or degrade leading the breakdown of company.
+Version control has keep changes made.It keep track of all act of code. 
+Tools
+Subversion [svn] keep current and historical  version of source code.
+ Concurrent Version System: keep upto date changes.When conflict occur it has tob edit manually.
+
+Source code hosting facilities :Project in repo... in Github,GitLab.BugZilla track bugs
+Mailing list and IRC ensure coordination among developers. 
+

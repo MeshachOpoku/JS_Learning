@@ -1,0 +1,15 @@
+Rule: 20min at least a day.
+Day1:Revision on Javascript[JS]
+  20 min 
+Day2 :Nesting of function and blocks.
+      lexical scoping: local see local,all see global scopes.
+      function declaration:
+      eg:function sayHi(){}
+Day3 :Arrow function:
+Day4: Stack call
+Day5: Using different function approach to create something!
+Day 6: Applying functions and scope in refactoring ticket.
+ -Coding finding number of days left to die.
+
+ Converting string to number.Hmm Code listen to me.
+ Square bracket disturbed me in my calculation of total bill but is resolved.

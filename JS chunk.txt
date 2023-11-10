@@ -1,0 +1,614 @@
+
+
+Eloquent Javascript Takeway
+Language hides details not enjoying .
+No need to specify how program jump back and forth but while or do for construct [loop] will..
+<<<<<<< HEAD
+bit has to be put in chunk[values] to understand it.Values can be number ,text  and other functions.
+Assuming where values take over computer storage then there is need to put some in free space .
+Values of number eg 3
+number use  64 bits to  store particular number.Similarly, given 64 binary
+digits, is represented 10 raised to the power 64[That is 10^64] which is equals about 18 quintillion
+(an 18 with 18 zeros after it).Computer memory used to be much smaller, and people tended to use groups
+of 8 or 16 bits to represent their numbers.
+What about negative .bit can be used to store decimal number and nonwhole and even decimals point . These has to be represented.
+2.998e8 =2.998 *[10 to the power 8] .This type of number has been represented but taking 9 quadrillion (15 zeros) .So a number or value which goes  beyond 64 bit hence can not be represented.
+=======
+bit has to be put in chunk[values] to understand it.Values can number ,text  and other functions.
+Assuming where values take over computer storage then there is need to put some where to free space .
+Values of number eg 3
+number use  64 bits to  store particular number.Similarly, given 64 binary
+digits, is represented 10 raised to the power 64[That is 10^24] which is equals about 18 quintillion
+(18,446,744,073,709,552,000 or an 18 with 18 zeros after it).Computer memory used to be much smaller, and people tended to use groups
+of 8 or 16 bits to represent their numbers.
+What about negative bit can be used to store decimal number and nonwhole and even decimals point . These has to be represented.
+2.998e8 =2998 *[10 to the power 8] .This type of number has been represented but taking 9 quadrillion (15 zeros) .So 9 quadrillion (15 zeros) goes  beyond 64 bit hence can not be represented.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+many numbers lose some precision when only 64 bits are available to store them.
+
+Operator s:
+ % is remainder operator  4%2=0 ; 7%2=1
+  Arithmetic operation : use parentheses to escape if you donot know precendence of operators.
+Special numbers:
+Infinity is for large positive number while [-Infinity is for negative number].
+NaN  is also around and stands for 'Not a number'.
+String : 
+here text are in enclosed content in quote[double quote,single quote ,back tick to make text].
+eg `Hello`, 'Hello',"Hello"
+/*Assignment**/ greeting =`Hello` 
+Some character which cannot be put under quote should use backslash (\) 
+eg in='Fan \n Games';
+<<<<<<< HEAD
+Another \': 
+ eg data= 'Akua\'s name is every where.'; console.log(data)/* output: Akua's name is every where.
+=======
+Another \' eg data= 'Akua\'s name is every where.'; console.log(data)/* output: Akua's name is every where.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+
+To display \ n as test it must be like this [\"\\n\"]
+eg sentence=" \\n\ is used in JS"; console.log(sentence)//output: \n is used in Javascript.
+eg /*code*/ sentence=" \"\\n\"  is here"; console.log(sentence);//output: "\n"  is here.
+
+<<<<<<< HEAD
+String can not be used to perform calculation of any sort but can do concatenation[Joing two or mor words.JS strings uses 16 bits per string element.So some characters, such as many emoji, take
+=======
+String can not perform calculation of any sort by can do concatenation.JS strings uses 16 bits per string element.So some characters, such as many emoji, take
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+up two “character positions” in JavaScript strings.
+example of concatenation 
+/*code*/
+concatText="Pen" + "is used in traditional school"; console.log(concatText);
+/*code*/
+news="Noon news" ; update=" is upcoming next"; console.log(news+update+"\nstay glued to your TV set");
+
+Expression eg can number or whatever. eg 22 or any word . Like  sentences humanns use so is it in programming .
+Semi-colon are needed in Javascript.
+binding = variable;
+eg let HighTemperature="High";
+   let  LowTemperature="Low"
+  console.log(HighTemperature);
+  console.log(LowTemperature)
+
+Boolean
+Tenary 
+eg  console.log(false?1:0);
+
+Empty values carry no information eg null and undefined
+ 
+In binding a var is a keyword for declaring variable .
+Variable can contain numbers but number should not start any variable and should not contain any puntuation  mark.
+It  can contain dollar( $) and (_) underscore
+eg $payment=69.00;
+   _name="Kobi";
+
+Nan [Not a Number] is nonsensical computation and is the only thing which does equals itself.[day3]
+Day 4 [ 14/8/2023]
+1. {!== }or 2.{!===   }  The 2 check the the compared stated whether they are the same
+ eg for 1: console.log(""!==false) ;//output:true.
+        
+eg for 2 : console.log(""!===false) ;//output:false : they are not prescisely the same.
+
+
+
+Consider these 
+a {==}  b{===}
+eg console.log(""==false);//output:true
+<<<<<<< HEAD
+   console.log(""===false)//output:false :[It means the two comparing statement are not prescisely the same.]
+
+Boolean operators 
+NaN ,0, empty ,"" are counted as false while others a true.NB empty values carries no meaningful info.
+=======
+   console.log(""===false)//output:false :[It means the two comparing statement are prescisely the same.]
+
+Boolean operators 
+NaN ,0, empty ,"" are counted as false while others a true.NB empty values carries no meanful info.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+eg console.log(""||"Meshach")//Output: Meshach
+
+ console.log(0||"Meshach")//Output: Meshach
+
+ console.log(NaN||"Meshach")
+
+
+other
+console.log(0||'!?')
+//output: !?
+
+The same goes for [false && X],
+<<<<<<< HEAD
+eg code
+console.log(false&&'X')
+/*Output:false*/
+which is false and will ignore X. This is called short-circuit evaluation
+
+Expression Vrs Statement Vrs Program.
+=======
+which is false and will ignore X. This is called short-circuit evaluation
+
+Expression Vrs Statement Vrs Expression.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+Expression is a code that produces a value.
+Expression make up statement .
+Program is made of more statement.
+
+eg of program
+1;
+!1;
+
+Statement having effect to machine in order to change state to produce something  hence is called side effect.
+<<<<<<< HEAD
+
+=======
+egShowing a dialog box or writing text to the screen is a side effect.
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+
+
+
+Semicolon end the sentences .
+<<<<<<< HEAD
+binding=variable; here we attach something but maybe not  stored  in the value
+eg: 
+ten=10; console.log(ten*ten);
+=======
+binding ==variable; here we attach something but maybe not  stored  in the value
+eg: 
+ten=10; console.log(ten*ten)
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+// 100 
+
+eg:
+mensahDebt=12;
+<<<<<<< HEAD
+
+console.log(mensahDebt-2);
+=======
+mensahDebt=mensahDebt-2;
+console.log(mensahDebt);
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+//10
+
+one=1; two=2;
+console.log(one*two)
+<<<<<<< HEAD
+//2 NB:[console logging 2 is stored in thin air because is produced from multiplication of one and two]
+=======
+//3 NB:[3 is stored in thin air]
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+
+
+greeting="Good Morning ";
+name="Naa";
+console.log(greeting+ name);
+
+
+<<<<<<< HEAD
+Binding or variable can be any word except inbuilt keyword.
+Number can be attached to binding or variable name  should   not start  with number.
+Special or reserved words should not be a binding word
+=======
+Binding or variable can any word except keyword.
+Number can be attached to binding or variable name  should   not start  number.
+Special or reserved words should be binding word
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+[break case catch class const continue debugger default
+delete do else enum export extends false finally for
+function if implements import interface in instanceof let
+new package private protected public return static super
+switch this throw true try typeof var void while with yield
+]
+
+Collection of binding or variable  with its value is called environment.
+
+
+<<<<<<< HEAD
+FUNCTION:is a piece of  program that is wrapped in value.eg binding prompt holds a function that shows a little dialog box that can take input.
+code :
+prompt("Enter passcode");
+
+Executing a function is called calling or invoking or applying .
+A function can be called by specifiying  name of function together with parentheses in curly bracket {()}
+eg addFunction(),displayResult();
+simply to create a function:
+pick a variable name.
+Equate variable name to the function to be created.
+first function keyword is needed .
+second bring parentheses either with parameters or no parameters.eg: (x) or ();
+third  bring curly brackets.{} ;
+eg :creating a function:
+sayHello=function(){console.log("Hello");}
+
+How do you call a function?
+Ans:
+variableAssignedToFunction ()
+eg. sayHello()
+
+sayPlease=function(){return "Please!";}
+sayPlease();/*We calling the sayPlease function*./
+
+or 
+sayPlease()=function(){console.log("Please");}
+sayPlease();
+NB: sayHello ,sayPlease function has no parameter or values in the parentheses  or  braces.
+
+Creating function with  parameter in parentheses
+ans:
+test=function(parameterName){console.log(name+" the medical test is done successfully!");}
+/*calling test*/
+test("Noma");
+ 
+/*Output: Noma the medical test is done successfully!
+
+creating function with multiple parameters:
+displayRecords=function(companyName,companyAddress,companyLocation)
+{console.log("Company Name:"+companyName+"\n"+"Company Address"+companyAddress+"\n"+ "Company Location"+companyLocation);
+}
+/*calling displayRecords*/
+displayRecords("Ananse",'Ananse23444',`Boko`);
+
+/*Output: 
+Company Name:Ananse
+Company AddressAnanse23444
+Company LocationBoko
+
+
+creating function which collect user data and displayRecords:
+/*Accept user data with prompt function ! Remember is a comment*/
+companyName=prompt("Enter company name");
+companyAddress=prompt("Enter company address");
+companyLocation=prompt("Enter company location");
+/*function will take input and display them*/
+displayRecords=function(companyName,companyAddress,companyLocation)
+{console.log("Company Name:"+companyName+"\n"+"Company Address:"+companyAddress+"\n"+"Company Location:"+companyLocation);
+};
+/*call displayRecords*/
+displayRecords(companyName,companyAddress,companyLocation)
+
+we attach keyword to make our function unchangeable or constant
+eg 
+const divideNum=function(a,b){console.log(a/b);};
+divideNum(4,2);
+/*Output: 2
+
+Using let keyword:
+let add=function(v,z){console.log(v+z);}
+add(4,7);
+/*Output:11
+
+Using var keyword;
+var call=function(){ console.log("Wait.. Making a call");
+}
+call();
+/*A function with no return expression or  return without any statement  displays   undefined!
+Return statement determines what is returned by a function and if a function is called it jumps out giving results.
+Parameters to a function behave like regular bindings, but their initial values
+are given by the caller of the function, not the code in the function itself.
+
+Scope:
+There are 
+global scope and local scope.
+Global is visible to all at any where in a program while local scope of variable is visible in a block of code or function.
+Variable declared in function are local .
+Every time the function is called, new instances of these bindings are created.
+Hence each function act in its own environments because there is isolation for each function.
+variable declared with let or const within a block is visible or seen in only the block.The statement before or after the block can access them.
+
+eg:
+console.log(name);
+if(false){
+const name=`Serwaah`;
+ console.log(name);
+}
+ /*Output: 
+
+if(true){
+let  password=`Serwaah`;
+
+};
+console.log(password);
+/*Output: 
+NB: since name in first condition is not accessible outside hence displaying nothing occurs. Same for password in if conditions
+
+
+A variable declared with var whether is within a block or not is a global varible:
+eg 
+console.log(key);
+if(true)
+{
+var key=23;
+}
+/*console.log(key);*/
+/Output: 23  :The reason for commenting the other is because in consoling or print same variable different time one is displayed and the other is not so I commented the one below.
+
+Nb: Answer may vary from one browser to another.
+scope will have some exception
+eg 
+halfMe=function(n){ return n/2;}
+ n=2;
+console.log(halfMe(3); 
+
+/*Output: 1.5
+/code 
+for(i=0; i<10;i=i+0.5 )
+{ console.log(i+"-");}
+/*Output :it display i value and '-' for several time */
+
+/code
+for(i=0;p<30;)
+{  var line="---";
+ console.log(line);
+for (j=0;j<3;j++)
+{console.log(line);};
+i++;
+}
+
+/*Bug or Error is gold . Here the output is error.Please do correct it*/
+
+/code
+for(i=0;i<30;)
+{  
+var line="---";
+ console.log(line);
+   for (j=i;j<5;j++){ line='----';console.log(i+"P"+line);};
+  for (j=i;j<9;j++)                 { line='-------';console.log(i+"P++"+line);};
+i++;
+
+}
+
+/code
+for(i=0;i<10;)
+{
+for(j=i;j<4;j++){console.log("----");}
+if(i==5)
+{
+for(j=i;j<10;j++)
+{
+console.log("---")
+;}
+;};i++
+}
+
+
+/code 
+/*make a shape */
+
+for(i=0;i<20;)
+{ 
+ for(j=i;j<3;j++){console.log("--------")}
+ if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+ 
+    if(i==11)
+{
+for(j=i;j<15;j++)
+{console.log("--------");}
+;}
+ ; 
+    if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+
+;}
+
+/*Output : infinity .Error is gold!*/
+
+/code
+/Pomodoro Shape /
+for(i=0;i<20;)
+{ 
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{ gap="    ";console.log(gap+"----");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+   
+  ;i++
+}
+
+
+function avoid or eliminate repetition.
+Nesting function:
+Putting one function in another . In this situation there will be global and local binding or variable .
+Local variable can or is accessible within a block.
+
+Local scope sees local scope and all scope can access global scope then let call lexical scoping.
+If more function or block is placed in another function then there will be more degrees of locality.
+/*A function with parameter are initialized when is called or invoked by the caller.[Meaning parameters given values by the caller not the code in function itself.]
+If a variable is found outside a function the it can be used by everyone or evyery part of the program and is called global.
+But variable declared in the function is visible within a program hence is called local binding. Or local binding can reference or provide info for something within the function.
+Every time the function is called new instance is created  and hence provide isolation for each.
+Let and const are used when is local to block.o if you create one of those inside of a loop, the code before and
+after the loop cannot “see” it.Var is visible to all when not in function. 
+
+
+Note when bindings or variable have the same name remember a function with variable will consider or look at his own variable:
+/*Similar variable or bindings*/
+const halve=function(n){return "Answer:"+n/2;}
+let n=7;
+console.log(halve(n));
+
+Nesting:
+Nesting mean take it like this put one container in another and adding another container to what has already been done.
+This can generate a multiple scope!
+
+*/
+salary=function(rate,productivity)
+{
+  getSalary=function(time)
+  { let totalAmt=rate*time*productivity;
+  console.log(totalAmt);
+  }
+
+  getSalary(5);
+}
+   salary(4,2);
+
+/*Giving user owner the arge to add input*/
+salary=function(rate,productivity)
+{ let year=2023;
+  getSalary=function(time)
+  { let totalAmt=rate*time*productivity;
+  console.log(totalAmt+"ghana cedis");
+  }
+ 
+     if(year===2023){ getSalary(5);}
+}
+   
+  
+   rate=prompt("Enter the rate for this year");
+  productivity=prompt("Enter the productivity level for this year");
+ salary(rate,productivity);
+
+
+
+Variable assigned to function or equated to function can be used like what others variable  are for. it can be declared constant or not .Constant [const] is attached when declaring a variable .Example const variable_name="Meshach". 
+Remember the variable equated to a function can declared constant or let ,it can be passed as argument or parameter or used arbitrary in special cases. Magic can be performed on the variable assigned to or equated to a function.You are the magician perform your magic!
+
+
+There are many ways of doing one thing!
+So is function. We are going to declare function in another way.
+Hence function declaration.
+
+function declaration: 
+-here start with word function.
+-give a sound name to it and attach braces that is ()
+-introduce curly bracket like {}
+NB: no semi-colon [this symbol ;] is not need at the end of  curly bracket
+
+eg: function sayHello(){ return "Hello";}
+    console.log(sayHello()+" Priscilla"); 
+
+Arrow function uses arrow or[eqaul sign and and greater than sign.Eg => is correct one.  
+It should not be this >= .
+Creating arrow function:
+-get sound variable name declare it.
+-bring equal sign .
+-get thy braces or parenthses with either parameters or no parameters.
+- this symbol  like an arrow which is =>
+-bring curly bracket like {;}
+-end with semi-colon.
+
+eg:
+const power =(base,power)=>{ let answer=1;
+  for(x=0;x<power;x++)
+     { answer*=base;};                                                                                                                                         
+   return answer;
+;}
+
+/*calling a function */
+power(2.3,4)
+
+/*User can add or input some thing*/
+const power_code =(base,power)=>{ let answer=1;
+  for(x=0;x<power;x++)
+     { answer*=base;}                                                                                                                                         
+ ;return answer;
+;}
+
+/*calling a function 
+power(2.3,4).it is  commented so nothing is done here.*/
+/*Users section.Comment.*/
+base=prompt("Enter the dase of the number");
+power=prompt("Enter the power of the number");
+
+/*passing user input as these argument into a function below*/
+power_code(base,power)
+
+
+/*Code:Same function name as parameter as variable but code work not */
+/*User can add or input some thing*/
+const power =(base,power)=>{ let answer=1;
+  for(x=0;x<power;x++)
+    { answer*=base;
+    }                                                                                                                                         
+    ;return answer;
+;}
+
+/*calling a function power(2.3,4).it is  commented so nothing is done here.*/
+/*Users section.Comment.*/
+base=prompt("Enter the dase of the number");
+power=prompt("Enter the power of the number");
+
+/*passing user input as these argument into a function below*/
+power(base,power);
+/*Output: Error
+
+The ongoing fact is with arrow function we can eliminate braces or parentheses around parameter  list.
+Curly bracket around main body can be removed in some cases.No curly bracket, no word 'return' should be added.
+
+
+call stack:
+It is when a function which make a call to the function and the the program must keep records where it started from the call and where it must continue from.
+/*A function must know where it was called and keep that context at the time it called and  stores the context in a stack! and later continue from there.
+When these stack space become full ,the device will cry out saying "Out of stack space" or 
+
+"stack space is full" or "Too much recursion".
+A location where a computer stores this context is called the call stack*/
+=======
+FUNCTION:is a piece of  program that is wrapped in value.egbinding prompt holds a function that shows a little dialog box that can take input.
+Function eliminate repetition in program.
+code :
+prompt("Enter passcode");
+
+Execeuting a function is called calling or invoking or applying .
+A function can be called by specifiying  name of function together with parentheses{()}
+eg addFunction(),displayResult();
+function produces value.
+Days left :94
+Value passed into the parenthesis is called argument.
+Return values :When a function returns value.
+eg console.log(Math.max(5,3)) 
+
+console.log display something.
+writing text to screen  is side effects .
+If a function produces values then we say is returned.
+
+number=Number(prompt("Hello , enter age));
+console.log(number)
+
+comment are ignored by computer.
+proper branch =Conditional Execution.
+statement in braces is block.
+
+if keyword is conditional 
+
+NB: var and let are different let do its work like const
+
+
+
+// Displaying from 1 to Millon is unworkable using console.log alone but can be possible with loop.
+
+for(i=1;i<=1000000;i++)
+{console.log(i+"/n");}
+
+Loop can for loop,while loop ,do while  and others
+These loop has parentheses ,statement and increment or decrement variable .Statement  maybe the condition that should be meet.
+
+//solve this :calculate the 2 raised to the power 10 uisng  loop?
+solution:
+var answer=2;
+for (i=0;i<=9;i++)
+{
+  answer*=answer;
+}
+console.log(answer); 
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
