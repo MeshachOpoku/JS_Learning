@@ -25,7 +25,8 @@ for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';break
 
 code5 food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
 for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
-input=prompt("Select an option"); check=0;console.log("My input fooling is "+input); input=parseInt(input);
+input=prompt("Select an option"); check=
+0;console.log("My input fooling is "+input); input=parseInt(input);
 for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';console.log("Ordered food is found ");break;} else {'false';};}
 
 //code 6 
@@ -33,3 +34,2739 @@ input=prompt("Enter one  letter");
 le=['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
  for(i=0;i<26;i++)
 { {bin=(le[i]==input)?1 :0;};console.log(bin);}
+
+
+//code 7 deletion queue algorithm
+arr=[2,4,5,6,7,'p'];console.log("Before deletion")
+console.log(arr);
+for(i=0;i<arr.length;i++)
+{ arr[i]=null;};console.log("After deletion");console.log(arr); 
+//==>Why print some text different from arr is that I want it in be array format meaning like this [num1,num2,...,numN]
+
+//code 8 check isArrFull
+arr=[2,4,5,6,7,'p']; arr.length=4294967295;
+// check if arr is empty or full 
+if(arr.length>4294967296){
+console.log("Array size full");}
+else{ console.log("Array not full");console.log("Happy Coding !");}
+
+
+// code 9 insert a node  at  a particular  location 
+NodeAddToEndOfArr=(arr,node)=>{
+ //adding data at the end of Arr
+  i=arr.length; /*Node extended*/
+console.log(i);arr.length=node.length*i;console.log(arr.length); //enlarge arr size
+ console.log(node.length);//check new length of arr passed
+for(b=0;i<arr.length&b<node.length;i++,b++){arr[i]=node[b]; 
+console.log(node[b]);;};console.log(arr); }
+arr=[2,4,5,6,7];
+node=[3,6,5,7];console.log(arr.length);
+// check if arr is empty or full 
+if(arr.length>4294967296){
+console.log("Array size full");}
+else{
+ console.log("Array not full");
+NodeAddToEndOfArr(arr,node);   
+
+
+
+
+//code 10 Insert element in middle part of arr.
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[];
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2; /*Divide  arrIndex into two*/; NewArrSize=len*len*node.length;console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   { NewArr[i]=arr[i];};console.log(NewArr);if(Middle==i){console.log(len-Middle);};
+
+}
+     ;addNodeToMiddleOfArr(arr,node);//function call
+
+/*Note if Less than Middle so JS  will not let if(Middle==i) works and show undefine but  printing outside condition produce 2.5*/
+
+//code 11
+/*initial stage*/
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[];
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2; /*Divide  arrIndex into two*/; NewArrSize=len*len*node.length;console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   { NewArr[i]=arr[i];if(i==Middle){console.log("Hello");};console.log(NewArr);pin=len-Middle;console.log("Number of element left to be added "+ parseInt(pin));
+console.log("Node to be added are"+node);
+}
+addNodeToMiddleOfArr(arr,node)
+/*initial stage*/
+
+/*2nd Refactoring*/
+
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[]; 
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1); i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++){ NewArr[i]=node[p];};                                                                                                                                                                                                                                           ;pin=len-Middle;console.log(NewArr);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node)
+/*2nd Refactoring*/
+
+/*3rd Refactoring */
+
+NodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr.length=NewArrSize;};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1);
+  i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++)
+   { NewArr[i]=node[p];};                          
+   middle=parseInt((len/2)+1); 
+   newTotal=middle+total;
+  for(i;i<newTotal&&middle<(len);middle++,i++){NewArr[i]=arr[middle];console.log(NewArr[i]);}
+   ;pin=len-Middle;console.log(NewArr);console.log("New Arr"+NewArr.length);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node)
+/*3Refactoring 
+
+/*4 Refactoring*/
+NodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr[NewArrSize];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1);
+  i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++)
+   { NewArr[i]=node[p];};                          
+   middle=parseInt((len/2)+1); 
+   newTotal=middle+total;
+  for(i;i<newTotal&&middle<(len);middle++,i++){NewArr[i]=arr[middle];console.log(NewArr[i]);}
+   ;pin=len-Middle;console.log(NewArr);console.log("New Arr"+NewArr.length);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node)
+/*4 Refactoring */
+
+// code 12 total count while is incrementing;
+count=1; total=0;
+while(count<10)
+{
+  total+=count;
+  count+=1
+
+
+};
+console.log(total);
+
+
+
+//code 13  totaling
+count=1 ;total =0;
+while(count<=10){total+=count; count+=4;}
+console.log(total);
+
+
+//code 14
+//code 13  totaling
+count=1 ;total =0;
+while(count<=10)
+{console.log("Number count before cal"+count);total+=count; count+=8;}
+console.log(total);
+
+//code 15
+
+
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[]; 
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1);
+  i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++)
+   { NewArr[i]=node[p];};                          
+   middle=parseInt((len/2)+1); 
+   newTotal=middle+total;
+  for(i;i<newTotal||middle<len;newTotal++,i++){NewArr[i]=arr[middle];}
+   ;pin=len-Middle;console.log(NewArr);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node) 
+
+//code 16
+Natural Language for GraphGenerator :[Take a set of array and  pass through method or function to generate graph]
+1. Declare arr and assign element and corresponding values ;
+2. GraphGenerator(arr){
+method or function generate for each element : name,corresponding graph ,percentage and make professional judgment
+}
+3. Display all info on screen for user  to see.
+
+
+//code 16
+/*1st Refactoring*/
+a=[];b=[]
+for(i=0,p=0;i<5;p++,i++)
+{
+a[p]=i;
+b[p]=p
+
+}
+if(i==p++)
+{ a[p]=b;}
+console.log(a);
+
+/*comment : in array 'a' why is a part empty because p is incremented hence one value is skip before the last element is added.*/
+
+/*2nd Refactoring*/
+a=[];b=[]
+
+for(i=0,p=0;i<5;p++,i++)
+{
+a[p]=i;
+b[p]=p
+
+}
+if(i==p)
+{ a[p++]=b;}console.log(a);console.log(a.length);
+;for(i=0;i<a.length;i++){console.log(a[i])};
+
+//Code 17 Linked list 
+/*1st refactoring*/
+class box{
+ data;//declaration
+ next;//another declaration 
+box=(data)=>{this.data=data;}
+}
+;
+boxA=new box(4);
+boxB=new box(1);
+boxC=new box(2);
+/*1st refactoring*/
+/*2nd Refactoring*/
+class box{
+ data;//declaration
+ next;//another declaration 
+box=(data)=>{this.data=data;}
+}
+;
+/*display same result*/
+boxA=new box(4);// 
+
+/*2nd Refactoring */
+
+/*3nd Refactoring*/
+class box{
+ data;//declaration
+ next;//another declaration 
+box=(data)=>{this.data=data;}
+}
+;
+/*display same result*/
+boxA=new box();
+
+/*3nd Refactoring */
+
+/4th Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();box2.data="Solve more problem";
+/*comment:if data and next variable which not assigned for box1 will have undefined*/
+console.log("Box1 data is "+box1.data);
+console.log("Box2 next  is "+box.next); 
+
+/*After assigning the undefined goes away with now tho the values showing */
+box1.data=4;
+box1.next="Hmm"+box2;
+console.log("box1 data is:"+box1.data);
+console.log("Next as is"+box1.next)
+/*4 th Refactoring*/
+/5th Refactoring*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+/*comment:if data and next variable which not assigned for box1 will have undefined*/  console.log("1.Before Assignment");
+console.log("Box1 data is "+box1.data);
+console.log("Box1 next  is "+box1.next); 
+
+/*After assigning the undefined goes away with now tho the values showing */ console.log("2.After Assignment");
+box1.data=4;
+box1.next=box2;
+console.log("box1 data is:"+box1.data);console.log("Box1 next is");
+console.log(box1.next)
+/*5th Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+console.log(box3.next)
+
+
+/*5Refactoring*/
+/6th Refactoring*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+console.log("box1 next is") ;console.log(box1.next);
+console.log("box3 next is");console.log(box3.next);
+/*6th Refactoring*/
+
+
+/*7 th refactoring/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is about movie";
+box3.data="Box3 data is about Business";
+box4.data="Box4 data is about research";
+
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+console.log(box1.next);console.log(box2.next);console.log(box3.next);
+
+/*7th Refactoring*/
+
+
+/*8 Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+console.log("Next_node after box1 is:",box1.next);  
+console.log("Next_node after box2 is:",box2.next);  
+console.log("Node _node after box3 is:",box3.next);
+
+story="\t\tLearn from this story. I did not know anything till I found a better tutorial\n which lead me to this .";
+end="What do want to learn just watch video on it\n and keep practising and they will transform you. Happy coding !"
+console.log(story,end);
+/* 8 Refactoring */
+
+/9* Refactoring code*/
+
+
+/*8 Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ for(i=0;i<5;i++)
+{ box[i];}
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+/9* Refactoring code*/
+
+/*10 Ananse version for fun*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ for(i=0;i<5;i++)
+{ console.log(box+`|i|`);}
+/*10 Ananse version for fun */
+
+
+/*11 version  for play*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ for(i=0;i<5;i++)
+{ console.log(box+`|i|`=='');}/* Output: 5x false*/ 
+//
+  
+
+/*12 version fun */
+class box{
+data;
+next;
+box(data){this.data=data;};}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ /*comment display class plus `|i|` on screen*/
+console.log(box+`|i|`);
+/*12 version fun */
+
+
+
+/*13 version fun */
+class box{
+data;
+next;
+box(data){this.data=data;};}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ /*comment display class plus `|xl|` on screen*/
+console.log(box+`|xl|`);
+/*13 version fun */
+
+/*14 Version for game*/
+/*Factorial 1*2*3...= answer;
+fac=(n)=>{ if(n==0){return 1;} else {return fac(n-1)*n}}; fac(4);
+/*14 Version for game*/
+
+class box{
+data;next;box=(data)=>{this.data=data;}}
+box1=new box(); box1.data='Experience';console.log(box1.data);
+
+
+....
+/*code 15 calculating the total sum of interior angle of polygon...simple*/
+/*Using n=number of side of the the ploygon,  hence formular =n-2*180*/
+
+n=prompt("Enter number of side of the polygon");
+/* perfroming calculation */
+side=n;
+total=(n-2)*180;
+console.log("The total interior angle of polygon of  side "+side+"is "+total);
+
+
+
+/*code 16 :Finding total numbers of node in a linked List*/
+class Node {
+data;
+next;
+Node (data){
+this.data=data;}
+}
+ head=new Node("a");
+ nodeB=new Node("b");
+ nodeC=new Node("c");
+ nodeD=new Node("d");
+
+
+
+
+
+
+/*code 17*/
+
+class Node { 
+data;
+next;
+Node (data){
+this.data=data;}
+}; h=[]; end=10; arr=[2,3,4,5,6,7,8,7,54,3]
+for(i=0;i<arr.length; i++){ h[i]=new Node(arr[i])};            
+      for(i=0;i<arr.length;i++)
+{h[i].data=arr[i]; console.log(h[i]);}
+/*code17 */
+
+/*code 18*/
+line=['__','____','____','\/'] ;num=[1,2,4,3,5,6,7,'null','0'];                                                      
+   for(i=num.length,l=1;i>0;i--)
+{if(num[i]==null||num[i]==0){console.log("\/");l++};console.log(line[i]);}              
+  if(l>=2){console.log("From north , move east");} 
+
+
+class Node{
+Node head;
+Node data;
+Node (para)
+{ console.log(data);};}
+  beta=new Node;
+console.log(beta);
+
+
+
+/*code 18*/
+
+ men={ name:['Nana Kwame','Sam','Anasara'],gender:['Male','Female','Male'],num:['000','001','002']}  ;     console.log("Record of Customers ");                                                                                        for(i=0;i<=men.name.length-1;i++){console.log(men.name[i]+"\tGender:"+men.gender[i]+"\tid:"+men.num[i]);}
+  /*code 18*/                            
+
+
+
+
+
+
+
+/*code 19 */
+
+
+update=(data)=>{
+
+   
+  console.log("Avail state:"+data);}
+  
+  
+  
+  update("as");
+
+/*code 19*/
+
+
+
+/*code 20 */
+
+update=(data)=>{
+ if(data===''){ 
+   for(i=0;i<1;i++)
+   {console.log("Avail state:"+"");}
+  ;};}
+  update('');  
+/*code 20 */
+
+
+
+
+
+/*code 21*/
+
+percept=['Assin','Kenneth','Sam','Pamel']
+dat=['opp']
+update=(data)=>{
+ if(data==''){ 
+   for(i=0;i<dat.length;i++)
+   {console.log("Avail state:"+percept[i]);}
+  ;};
+  update('');                                                                                    
+/*code 21*/
+
+
+
+ /* code 22 Template Literal `${}*`/
+/*example: 	`${50/2}`;
+console.log(`${50/2}`); 
+//output :25//
+ /*Template Literal `${}*`/
+
+/*code 23 Template literal `${p+x}`*/
+console.log(`${40+2}`)
+//otuput: 42//
+/*Template literal `${p+x}`*/
+
+
+/*code 24 Template literal `${p-x}`*/
+console.log(`${40-2}`);
+//output: 38//
+/*Template literal `${p-x}`*/
+
+
+/*code 25 Template literal `${p*p}` */
+p=5;console.log(`${p*p}`);
+
+/*code 25 Template literal `${p*}` */
+
+/*code 26 Template literal */
+p=23;console.log(typeof`${p}`)
+/*code 26 Template literal */
+
+console.log(`${'Meshach'}`)
+/*code 26 Template literal */
+
+/*Boolean    > */
+console.log(6>0)
+/*Boolean  */
+
+/* Boolean <* /
+console.log(6<0);
+/* Boolean */
+
+
+/*Boolean <= */
+console.log(78<=10)
+/*Boolean */
+
+/Boolean >= */
+console.log((89>=80)
+/Boolean >= */
+/*Boolean */
+console.log('Seen'=='seen')
+console.log("They are not the same");
+output:false
+/*Boolean */
+
+? Design a program which compare users word with the hidden and reward if they get it right?
+word=prompt("Enter a word to win a reward")
+word=(word=="x")?"Winner":"Lose";
+console.log(word)
+
+?Collection of Money and Recording?
+totalRecords=prompt("Enter the total records");
+userName=[];
+userPrice=[];
+for(i=0,p=1; i<totalRecords;i++,p++)
+{
+userName[i]=prompt("Enter name customer:"+p+":");
+userPrice==prompt("Enter price paid:\n");
+
+
+
+}
+heading=()=>{ console.log('List of Payment Records');};gap=()=>{console.log("\n");};
+heading ();
+for(a=0,n=1;a<totalRecords;a++)
+{  
+console.log("User"+n+":"+userName[a]);
+console.log("Price paid:"+":"+userName[a]);gap();
+n++;
+}
+
+
+? Generating each letter in the arr  form start?
+passage=["dvbvdslvjbsssslllllllllldvbldvbvlvbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+vdvndsklnvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvlskbvlvkbvldsvkbdvldvnclknnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnndkvd
+svlsdkvnkkkkkkkknvlkvnldvndlvkkkkkkn"];
+ptot=passage[0].length;
+         for(i=0;i<ptot;i++){
+           console.log(i+":"+passage[0][i]);
+         }
+?Generating each letter in arr from last to start to finish?
+passage=["dvbvdslvjbsssslllllllllldvbldvbvlvbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb      vdvndsklnvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvlskbvlvkbvldsvkbdvldvnclknnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnndkvdsvlsdkvnkkkkkkkknvlkvnldvndlvkkkkkkn"];
+ptot=passage[0].length;
+         for(i=ptot;i>-1;i--){
+           console.log(i+":"+passage[0][i]);
+         }
+
+
+
+//code 27
+ name='Zid';
+ greeting="Hello";
+ console.log(greeting +"!"+zid);
+
+
+//code 28
+ var _name="Zid";
+ const $age=45;
+console.log("Name:"+_name+"\nAge:"+$age);
+
+/*output: 
+Name:Zid
+Age:45*/
+     
+
+//code 28 
+  console.log(true? 1:6)
+
+/*output:   1*/
+ 
+
+//code 29 
+console.log(false?1:0);
+ 
+/*output: 30 Accepting anything*/
+ console.log(5*null)
+/*output: 0*/
+
+/*code 30 
+console.log("5"-1)
+/*output: 3*/
+
+/* code 31 
+console.log("5"+1);
+
+/*output: 51  */
+
+
+/*code 32 */
+console.log(`5`-1)
+/*output: 4*/
+
+/*code 33 */
+console.log(`5`+1)
+/*output: 51*/
+/*code 34 */
+console.log("password"+1);
+/*output: pasword1*/
+
+
+?Create program which enable learners  answer question?
+authenticate=(_name,_email)=>{  
+choice=prompt("Select anoption :\n 1.Show user details\n2.Skip"); 
+choice=(choice==1)?hand():"Message";
+//console.log(choice);
+
+
+}
+_name=prompt("Enter Name"); 
+_email=prompt("Enter Email");
+authenticate(_name,_email);
+
+function hand(){
+  console.log("Name: "+_name+"\nEmail: "+_email);
+    option=prompt("Select an Option \n1.Start Test \n2.Read");
+  if(option==1)
+  { 
+
+Q=["Convert 1000 in binary  form to decimal form","Binary number is made of up of how many number","Convert 1000 to hexadecimal"];
+;A=[8,2,8];
+ learner=[];    score=0
+; correct=[];incorrect=[];
+ console.log(" Hands On  Examination \n--------------------\nMore test . More Experience... \nSubject :Programming Fundamentals \nSolve all question by providing only your answer")
+    ;
+  for(i=0,P=1;i<Q.length||P<Q.length-1;i++,P++)
+    {console.log(Q[i]); learner[i]=prompt("Respond to Question"+P);console.log(learner[i]);
+     if(A[i]==learner[i]){correct[i]='correct'; score++}
+     else{incorrect[i]='Incorrect';}
+    
+    if (i==Q.length-1){  
+  console.log("\nName:"+_name+"\nEmail:"+_email+"\nScore :"+score+"  out of "+Q.length
+);   
+  ;}
+    
+    else {};}
+    }
+ 
+  else{console.log("Mask");}
+}
+
+
+/Removing data from arr code
+//code 36
+q=[2,3,4,5,6,6];
+console.log("The main length of q arr"+q.length);
+for(i=q.length-1;i>=0;i--)
+{console.log(q.pop(-1));
+console.log(q)
+console.log("Length of aarr"+q.length)
+
+}
+if(q==""){console.log(" Array is ");}
+
+
+
+<<<<<<< HEAD
+
+/code 37
+square=function(x){ return x*x;}
+square(2);
+console.log(square(2));
+
+
+
+/code 38 
+makeNoise=function(){console.log("Boom!");}
+makeNoise();
+
+
+using function write code which calculate the a number raised to any power or exponent
+
+cal=function(base,power)
+{ outcome=1;
+for(start=0;start<power;start++)
+{ outcome*=base;};
+ return "Answer :"+
+outcome;
+}
+;
+
+console.log(cal(3,4));
+cal(4,6);
+/*output: Answer : 81
+  'Answer :4096';
+/*alternative to cal */
+cal=function(base,power){ console.log(base**power);};
+cal(4,3);
+
+?* Giving user ability to do calculation of base and power*?
+ 
+cal=(base,power)=>{console.log("Answer is:"+base**power);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power);
+/Refactoring cal code */
+cal=(b,p)=>{console.log("Answer is:"+b**p);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power)
+/*Creating pomodoro shape*/
+pomodoro=function(){for(i=0;i<20;)
+{ 
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{ gap="    ";console.log(gap+"----");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+   
+  ;i++
+};
+ }; pomodoro();
+
+
+/code  :
+/*Display a shape*/
+miniShape=function (){
+for(i=1;i<=3;)
+{ if(i==1){console.log("----------");}
+  else if(i==2){gap="    ";console.log(gap+"---");}
+  else {console.log("----------");};
+ i++;
+}
+;}
+
+miniShape()
+
+?Printing from 1 to 100 except numbers divisible by two and for number divisible by 3 print or display 'Fuzz'?
+for(i=0;i<=100;i++)
+{  if(i%2!==0)
+  { 
+      if(i%3===0)
+        {  if(i%3===0||i%5===0)
+                {console.log("FizzBuzz");};
+                console.log("Fuzz");
+                }
+   
+     else{
+          if(i%5===0){ 
+                  if(i%3===0||i%5===0)
+                   {console.log("FizzBuzz");};
+                    console.log("Buzz");
+                   }
+
+          else{  console.log(i);}
+         }
+
+  };
+
+}
+
+?Chess game reation*?
+p='x';ga="  ";diagram=p+ga+p+ga+p+ga+p;                        
+for(z=1;z<=8;z++)
+{                                        
+                                                           
+    if(z%2!==0)                                                   
+    { console.log("  "+diagram);}
+    else { ;console.log(diagram);}     ;
+}
+/*Some control on a chess game*/
+p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+?ability of user to change width and length of chess board?
+/*code z stage*/
+ var collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   console.log(collectAll);
+                   } 
+              };
+input=prompt("Enter width of chess game");
+width(input-1);
+
+/*code y stage */
+ collectAll='';;
+/*width function begins*/
+width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) /*any number from 1 up to infinity depends on your choice .*/
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+/*End the the width function */
+
+
+input=prompt("Enter width of chess game");/*collect input  for the width function*/
+width(input-1);/*Since the input will work in do while loop we decrement by one */
+
+
+/*combining zand y  for us we get x stage*/
+collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=gap+shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+
+input=prompt("Enter width of chess game");
+each=width(input-1);/each variable take up user requirement using width function and display it on each line.*/
+;/*p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; */ /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+
+
+/*More function renovation/*
+square =function (num){ return "Answer:"+ num*num;};
+square(8);
+/*Giving user ability to type choice of numbers in square a number*/
+square =function (num){ return "Answer:"+ num*num;}
+user_data=prompt("Calculate square of any number.\r\b\bEnter a number and get an answer.");
+square(user_data);
+
+/*code make noise function is like an alarm*/
+makeNoise =function(){console.log("Boom");}
+makeNoise();
+
+/*Notify us when visitor are in the house*/
+notify_me=function(){return " Visitor[s] entered the house";}
+notify_me();
+
+/*Alert alarm for police and ambulance*/
+carAlarm=function()
+{ console.log("Wawoo!");}
+carAlarm();
+/*User can given the sound for carAlarm to make*/
+carAlarm=function(fromUser)
+{ console.log(fromUser+"!");}
+;fromUser=prompt("Enter a sound for the car alarm");
+carAlarm(fromUser)
+
+
+
+/*power function: calculate any number raise to any power*/
+power=function(base,power){ soln=1;
+         for( ;power>-1;power--)
+         {  soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculating any number raised to positive power");
+ power(2,3);
+
+/*User can add their choice of number to program or user can add thier bit!*/
+
+ power_cal=function(base,power){ 
+          let soln=1;
+         for( ;power>-1;power--)
+         { soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power==prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+
+
+/*Refactoring the error from power_cal,It has some issues - found them and resolve them. Positive power can only work*/
+
+ /*power_cal=function(base,power){ 
+          soln=1;
+         for( ;power>-1;power++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+NB : Never increment  or decrement the needed number [which alt to remain stagnant ]when is compared with a number  */
+power_cal=function(base,power){ 
+          soln=1;
+         for(bstart=0 ;power>bstart;bstart++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+ 
+
+/*Refactoring code power_cal function accept both negative and positive powers*/
+
+power_cal=function(base,power){ 
+          soln=1;x=-1*power
+         if( (power/1)===x)
+            { for(bstart=0 ;power>bstart;bstart++)
+             { soln*=base;
+                console.log(soln);
+ 	       };
+            ;}
+         else
+         { x ;console.log(x);
+            for(bstart=0 ;x>bstart;bstart++)
+             { soln/=base;
+                console.log(soln);
+ 	       ;};
+          }
+           return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+
+/*Coding to verify gobal and local binding*?
+let x=9;
+if(true){ let s=2; var d=3;  console.log(x+s+d);};
+/*console.log(x+s); ===> :generate error why because s is defined with let and is a braces or parentheses hence local binding are not visible outside braces./;
+console.log(x+d);/* this side work even though is braces but we said if var is not in a function then is visible to all.*/
+
+
+/*Similar variable or bindings*/
+const halve=function(n){return "Answer:"+n/2;}
+let n=7;
+console.log(halve(n));
+
+
+/*Nesting function : puting one function in another!*/
+const improveSalary=function(increment)
+{
+    const salary=function(rate,time,name)
+    {  let amount=increment*rate*time;
+       console.log("Ananse E-commmerce Company\nCustomer Records:");
+    console.log(`${'Name :'+name} \n ${'Amount paid :'+amount}`);
+    }
+   salary(2,3,'Nam');
+  
+
+
+}
+
+;
+improveSalary(2);
+
+
+
+/*Code enhancement for improveSalary now called salary_Increment*/
+const salary_Increment=function(increment)
+{
+    const salary=function(rate,time,name)
+    {  let amount=increment*rate*time;        
+     ; console.log(`${"Name:Mr."+name}${"\nAmount for  your salary is:Ghc"+amount+".oo"}`);                 
+    }
+  
+    
+   salary(2,3,'Nam');
+  
+
+
+}
+
+;
+salary_Increment(3);
+
+/Buy a ticket be part of the program and win more product terms and condition exit*/
+ticket=function(free_reduction){               
+                benefit=function(name,location,phone_number,amount) {                                     
+                                                                  
+             result=free_reduction*amount;                                                                                            console.log(result+"You purchased ticket successfully!\n" +"You have won a nice notebook and airtime of ghc "+(amount-result-25));        
+                 ;}
+               ;   
+
+           benefit("Meshach","Boko",0541478368,100);
+;return "";
+}
+
+ticket(0.7);
+ticket(0.62);
+
+
+/*Refactoring the ticket function so users can input data*/
+ticket=function(free_reduction){               
+        benefit=function(name,location,free_reduction,phone_number,amount) {                                     
+                                                                  
+             result=free_reduction*amount;                                                                                                console.log(result+"You purchased ticket successfully!\n" +"You have won a nice notebook and airtime of ghc "+(amount-result-25));}        
+                 ;      
+                name=prompt("Enter name");
+                location=prompt("Enter location or digital address");
+                amount=100;        
+
+                benefit(name,location,amount);
+;return "";
+                              
+                              }
+
+ticket(0.7);
+
+
+
+/*Refactoring ticket*/
+ticket=function(free_reduction){               
+        benefit=function(name,location,free_reduction,phone_number,amount) {                                     
+                                                                  
+             result=free_reduction*amount;                                                                                                    console.log(result+"You purchased ticket successfully!\n" +
+"You have won a nice notebook and airtime of ghc "+(amount-result-25));}        
+                 ;      
+                name=prompt("Enter name");
+                location=prompt("Enter location or digital address");
+                amount=100;        
+
+                benefit(name,location,free_reduction,phone_number,amount);
+;return "";
+                              
+                              }
+
+ticket(0.7);
+
+/Removing data from arr code
+//code 36
+q=[2,3,4,5,6,6];
+console.log("The main length of q arr"+q.length);
+for(i=q.length-1;i>=0;i--)
+{console.log(q.pop(-1));
+console.log(q)
+console.log("Length of aarr"+q.length)
+
+}
+if(q==""){console.log(" Array is ");}
+
+
+
+
+/code 37
+square=function(x){ return x*x;}
+square(2);
+console.log(square(2));
+
+
+
+/code 38 
+makeNoise=function(){console.log("Boom!");}
+makeNoise();
+
+
+using function write code which calculate the a number raised to any power or exponent
+
+cal=function(base,power)
+{ outcome=1;
+for(start=0;start<power;start++)
+{ outcome*=base;};
+ return "Answer :"+
+outcome;
+}
+;
+
+console.log(cal(3,4));
+cal(4,6);
+/*output: Answer : 81
+  'Answer :4096';
+/*alternative to cal */
+cal=function(base,power){ console.log(base**power);};
+cal(4,3);
+
+?* Giving user ability to do calculation of base and power*?
+ 
+cal=(base,power)=>{console.log("Answer is:"+base**power);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power);
+/Refactoring cal code */
+cal=(b,p)=>{console.log("Answer is:"+b**p);}
+console.log(" Calculation on indices");
+base=prompt("Enter base. ");
+power=prompt("Enter power.");
+cal(base,power)
+/*Creating pomodoro shape*/
+pomodoro=function(){for(i=0;i<20;)
+{ 
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{ gap="    ";console.log(gap+"----");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+   
+  ;i++
+};
+ }; pomodoro();
+
+
+/code  :
+/*Display a shape*/
+miniShape=function (){
+for(i=1;i<=3;)
+{ if(i==1){console.log("----------");}
+  else if(i==2){gap="    ";console.log(gap+"---");}
+  else {console.log("----------");};
+ i++;
+}
+;}
+
+miniShape()
+
+?Printing from 1 to 100 except numbers divisible by two and for number divisible by 3 print or display 'Fuzz'?
+for(i=0;i<=100;i++)
+{  if(i%2!==0)
+  { 
+      if(i%3===0)
+        {  if(i%3===0||i%5===0)
+                {console.log("FizzBuzz");};
+                console.log("Fuzz");
+                }
+   
+     else{
+          if(i%5===0){ 
+                  if(i%3===0||i%5===0)
+                   {console.log("FizzBuzz");};
+                    console.log("Buzz");
+                   }
+
+          else{  console.log(i);}
+         }
+
+  };
+
+}
+
+?Chess game reation*?
+p='x';ga="  ";diagram=p+ga+p+ga+p+ga+p;                        
+for(z=1;z<=8;z++)
+{                                        
+                                                           
+    if(z%2!==0)                                                   
+    { console.log("  "+diagram);}
+    else { ;console.log(diagram);}     ;
+}
+/*Some control on a chess game*/
+p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+?ability of user to change width and length of chess board?
+/*code z stage*/
+ var collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   console.log(collectAll);
+                   } 
+              };
+input=prompt("Enter width of chess game");
+width(input-1);
+
+/*code y stage */
+ collectAll='';;
+/*width function begins*/
+width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) /*any number from 1 up to infinity depends on your choice .*/
+                   {
+                   do{  collectAll+=shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+/*End the the width function */
+
+
+input=prompt("Enter width of chess game");/*collect input  for the width function*/
+width(input-1);/*Since the input will work in do while loop we decrement by one */
+
+
+/*combining zand y  for us we get x stage*/
+collectAll='';;width=(input)=>{    gap=" ";shape='X';
+                   if(input>0) 
+                   {
+                   do{  collectAll+=gap+shape;input--}while(input>=0) ;
+                   return collectAll;
+                   } 
+              };
+
+input=prompt("Enter width of chess game");
+each=width(input-1);/each variable take up user requirement using width function and display it on each line.*/
+;/*p='x';ga="  "; 
+each=p+ga+p+ga+p+ga+p; */ /*contain 4 x's and can be used to form the whole diagram .*/
+size=prompt("Enter size of chess") ;console.log("Play Chess!");                                                                                        for(z=1,b=1;z<=size;z++,b++){                                        
+  ;                                                         
+ if(z%2!==0)                                                   
+ { console.log("  "+b+each);}
+   else { console.log(b+each);}     ;}
+
+
+/*More function renovation/*
+square =function (num){ return "Answer:"+ num*num;};
+square(8);
+/*Giving user ability to type choice of numbers in square a number*/
+square =function (num){ return "Answer:"+ num*num;}
+user_data=prompt("Calculate square of any number.\r\b\bEnter a number and get an answer.");
+square(user_data);
+
+/*code make noise function is like an alarm*/
+makeNoise =function(){console.log("Boom");}
+makeNoise();
+
+/*Notify us when visitor are in the house*/
+notify_me=function(){return " Visitor[s] entered the house";}
+notify_me();
+
+/*Alert alarm for police and ambulance*/
+carAlarm=function()
+{ console.log("Wawoo!");}
+carAlarm();
+/*User can given the sound for carAlarm to make*/
+carAlarm=function(fromUser)
+{ console.log(fromUser+"!");}
+;fromUser=prompt("Enter a sound for the car alarm");
+carAlarm(fromUser)
+
+
+
+/*power function: calculate any number raise to any power*/
+power=function(base,power){ soln=1;
+         for( ;power>-1;power--)
+         {  soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculating any number raised to positive power");
+ power(2,3);
+
+/*User can add their choice of number to program or user can add thier bit!*/
+
+ power_cal=function(base,power){ 
+          let soln=1;
+         for( ;power>-1;power--)
+         { soln*=base;
+
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power==prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+
+
+/*Refactoring the error from power_cal,It has some issues - found them and resolve them. Positive power can only work*/
+
+ /*power_cal=function(base,power){ 
+          soln=1;
+         for( ;power>-1;power++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+NB : Never increment  or decrement the needed number [which alt to remain stagnant ]when is compared with a number  */
+power_cal=function(base,power){ 
+          soln=1;
+         for(bstart=0 ;power>bstart;bstart++)
+         { soln*=base;
+          console.log(soln);
+ 	   }
+          return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+ 
+
+/*Refactoring code power_cal function accept both negative and positive powers*/
+
+power_cal=function(base,power){ 
+          soln=1;x=-1*power
+         if( (power/1)===x)
+            { for(bstart=0 ;power>bstart;bstart++)
+             { soln*=base;
+                console.log(soln);
+ 	       };
+            ;}
+         else
+         { x ;console.log(x);
+            for(bstart=0 ;x>bstart;bstart++)
+             { soln/=base;
+                console.log(soln);
+ 	       ;};
+          }
+           return soln;
+                   
+                      	  };
+console.log("Calculation of any number raised to a positive number");
+ 
+var base,power;/*declaring variable or binding*/
+
+/*data collecting using the declared variable declared above.*/
+ base=prompt("Enter the base for calculation.");
+ power=prompt("Enter the power for calculation.");
+ 
+/*invoking or calling power_cal [a function] and passing parameter or  argument base and power through it*/
+power_cal(base,power);
+
+
+/**Giving user owner the arge to add input*/
+salary=function(rate,productivity)
+{ let year=2023;
+  getSalary=function(time)
+  { let totalAmt=rate*time*productivity;
+  console.log(totalAmt+"ghana cedis");
+  }
+ 
+     if(year===2023){ getSalary(5);}
+}
+   
+  
+   rate=prompt("Enter the rate for this year");
+  productivity=prompt("Enter the productivity level for this year");
+ salary(rate,productivity);
+
+
+Values assign to function is like any other variable it can be kept constant or not .If is not constant it any thing can be assign to it.
+
+/*code*/
+tempRise=function(){ temperature.launch("Now");};                                                                                 if("safe"){tempRise=function(){/*Do not raise temperature maintain it*/;} ;}
+                                        
+ /*refactoring code without in built function launch [Note it will work]*/
+tempRise=function(){ temperature.launch("Now");};                                                                                 if("safe"){tempRise=function(){/*Do not raise temperature maintain it*/;} ;}
+
+  /*code */ 
+function sayHello(){ return "Hello";}
+    console.log(sayHello()+" Priscilla");
+
+/*Code:Future code */
+ console.log("Future says\""+future()+"\"");
+  function future(){ return "It is bright";}
+                              
+/* 
+Note: the future code works but please note the first part which is console.log code will start displaying 
+"Future says"  and later call or invoke function future() from beneath and display it. function declaration does not follow top-to-down approach  but works no matter whether the function is below or some where it can still call it and display them.
+The preceding code works, even though the function is defined below the code that uses it. Function declarations are not part of the regular top-to-bottom
+flow of control. They are conceptually moved to the top of their scope and can be used by all the code in that scope. This is sometimes useful because it offers
+the freedom to order code in a way that seems meaningful, without worrying
+about having to define all functions before they are used.
+
+*/
+
+Arrow function :
+eg 
+vin=()=>{return 'Hi';}
+;vin();
+
+/*using parameter in arrow function*/
+visa=(name)=>{return "Welcome! "+name+" has a visa .Thank you.";};
+visa();
+/*Output: Welcome! undefined has visa.Thank you.
+
+
+/*Code refactoring let's correct visa code above.*/
+visa=(name)=>{return "Welcome! "+name+" has a visa .Thank you.";};
+visa('Meshach'); 
+
+
+
+/*Eliminating braces in arrow function:
+eg 
+code :*/
+visa=name=>"Hello!"+name;
+  visa('Meshach');
+
+/*No curly bracket, no word 'return' should be added.*/
+/*Yes curly bracket, Yes word 'return' should be added.*/
+
+send=(pin)=>{return "It is sent.";};
+send("QP7");
+
+/*If no parameter is given to function please keep the parentheses  and curly brackets.
+eg:
+save=()=>{return "Saved!";};
+save();
+
+
+/*User can keep their records*/
+record=(name,location,orders)=>{
+   console.log("Client is nice to have you here!");
+rate=5;/*Each bag cost  5 in cedis*/
+Price_of_order=order*rate;
+console.log("Order is a success"+"\n Details:\nName :"+name+"\nOrder Price:"+Price_of_order+" cedis");
+
+};
+
+name=prompt("Enter your name .");
+locate=prompt("Enter your location or digital address");
+order=prompt("How bags of salt are you buying");
+ /*calling records function*/
+record(name,locate,order)
+
+/*Call stack*/
+function calls :[Records of where the program begun must be recorded and where it continue from must be known.]
+
+
+/*Code */
+
+function call(who){
+console.log("Calling..."+who);}
+ 
+call("Handsome");
+console.log("***");
+
+/*A function must know where it was called and keep that context at the time it called and  stores the context in a stack!
+When these stack space become full ,the device will cry out saying "Out of stack space" or"stack space is full" or  "Too much recursion".
+A location where a computer stores this context is called the call stack*/
+/*Error code code on the stack space*/
+function chicken() {
+return egg();
+}
+function egg() {
+return chicken();
+}
+console.log(chicken() + " came first
+
+/*Output: Error*/
+Chicken function call egg function and egg function will call chicken function and the same activity will occur till stack space is full.Error will pop up.*/
+
+/*code:it will produce an error*/
+function adult(){ return baby();}
+function baby(){return adult();}
+
+console.log(adult() +"give birth first");
+
+
+
+/*Creating a function using different function reation techniques*/
+function name_generator(city,pet)
+{
+ return "Name of music group could be: "+city+" "+pet+"band";
+}
+
+/*collecting  input */
+city=prompt("Enter the name of your city");
+pet=prompt("Enter a pet name");
+
+/*calling a function and passing an argument*/
+name_generator(city,pet);
+
+
+/*After eating at bar you want to know total bill and split among the members at a percentage*/
+
+console.log("Welcome to the tip calculator.");
+
+var total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+var each_pays=(total_bill/5)+(total_bill *percentage_share/100);
+console.log("Each person should pay :$"+each_pays);
+
+
+/*Update in bill code*/
+/*After eating at bar you want to know total bill and split among the members at a percentage*/
+Algorithm
+-Accept total bill 
+-how many people do want share your money for them
+-at what percentage do you want each to get
+-display
+=====> Problem :javascript is is doing concatenation while I want it to add numbers.
+console.log("Welcome to the tip calculator.");
+
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+total_bill=parseInt(total_bill);
+ var each_pays=total_bill+[total_bill*12/100] ;/*total_bill=total_bill+1.12 ==>1.12 mean 100 percent plus 12 percen*/
+  type(total);
+console.log("Each person should pay :$"+each_pays);
+
+
+===>
+/Code:Problem of the day :How may letter make my name?
+*/
+_name=prompt("Enter first name");
+console.log("First name is made of "+_name.length+" character[s]");
+
+
+/code:That tell how many days left for if we will live for 90years if your current age is given.*/
+ 
+-accept current_age
+-work the numbers days the person has lived . so let call it days used or days lived.
+-find total days on earth if he or she live for 90years.
+-substract days used from the total
+
+sol:
+var days_in_a_year=365;
+var years_on_earth=90;
+console.log("Check the number of years to live");
+current_age=prompt("Enter your current age?");
+days_lived=current_age*365;
+days_left=[years_on_earth*days_in_a_year]-[days_lived];
+
+console.log("You have "+days_left+" days left to live on earth");
+console.log("Or you have "+[years_on_earth-current_age]+" to live");
+=======
+//code 37
+console.log(Math.min(2,4));
+
+// 38
+
+//code 38[96 days more]
+console.log(Math.max(2,4));
+
+
+// code 39[95 daya more] 
+
+number=Number(prompt("Hello , enter age"));
+console.log(number)
+
+
+//code 40 [94 days]
+function Queue (){
+collection=[];
+this.print=function(){console.log(collection);};
+this.enqueue=function(data){return collection.push(data);};
+this.dequeue=function(){ collection.shift();};
+this.front=function(){ return collection[0];}
+
+}
+
+b= new Queue();
+b.print();
+b.enqueue(9);
+b.enqueue(8);
+b.enqueue(7);
+b.print();
+b.dequeue()
+;b.front();
+
+
+//code 41 
+function Queue (){
+collection=[];
+this.print=function(){console.log(collection);};
+this.enqueue=function(data){return collection.push(data);};
+this.dequeue=function(){ return collection.shift()+"deleted"};
+this.front=function(){ return "First data :" +collection[0];}
+  
+this.size=function(){
+  return "Length of array is :"+collection.length;
+}
+
+}
+
+b= new Queue();
+b.print();
+b.enqueue(9);
+b.enqueue(8);
+b.enqueue(7);
+b.print();
+b.size();
+
+//code 42 [93 days more]
+ counter = function() {
+    let count = 0;
+    return function() {
+        return ++count;
+    }
+};
+
+ x = counter();
+ console.log("Buy ")
+for(i=0;i<5;i++){
+ console.log("price of Cassava GHC"+x());
+
+;};
+
+
+
+//code 43
+//arrow function
+short=(input1,input2)=> input1+input2;
+short(7,8);
+
+console.log(short)
+
+
+// code 44
+simplify=((a,b)=>a+b)(3,6,10)
+console.log(simplify)
+
+//code 45
+generate_multiplier_function = a => (b => isNaN(b) || !b ? a : a*=b);
+ five_multiples = generate_multiplier_function(5);
+console.log(five_multiples(1)); 
+five_multiples(3); 
+five_multiples(4);
+
+
+// code 46
+simplify=((...args)=>a+b)(3,6,10)
+console.log(simplify)
+
+
+//code 47
+theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNumber)) {
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+};
+//code 48 [89 days]
+l=2;
+l=l+""+l;
+l=parseInt(l);
+beta=Number("l");
+alpha_l=~~l;
+reform_l=+l
+//Way of converting string to numbers 
+console.log(typeof l);
+console.log(typeof beta);
+console.log(typeof ~~l);
+console.log(alpha_l);
+console.log(typeof reform_l);
+console.log(l*1)
+//converting number string
+megaNumber=56;
+NewMegaNumber=megaNumber.toString();
+ChangeMegaNumber=''+megaNumber;
+reformMegaNumber=`${megaNumber}`;
+megaNumberEnhanced=megaNumber.toLocaleString();
+alteredMegaNumber=String(megaNumber);
+
+console.log(typeof NewMegaNumber);
+
+console.log(typeof ChangeMegaNumber);
+
+console.log(typeof reformMegaNumber);
+
+console.log(typeof megaNumberEnhanced);
+
+console.log(typeof alteredMegaNumber)
+
+
+   ?Trying classify values fro m user?
+     SocialMedia_follower_views=prompt("Enter the view on social media");
+     view=['small', 'Moderate', 'Huge'];
+     if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is" +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+   
+?Produce result only when input is number?
+SocialMedia_follower_views=Number(prompt("Enter the view on social media"));
+     view=['small', 'Moderate', 'Huge'];
+/*console.log(typeof SocialMedia_follower_views==true)
+console.log(parseInt(SocialMedia_follower_views))*/
+if(SocialMedia_follower_views)
+/* if a number it produce result else is letter .Output : Redo it*/
+    {if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is " +view[1]);}
+     else {console.log("Social Media views is "+view[2]);}
+    }
+else{ console.log("Redo it ");}
+
+ //code refinement          
+==> Another approach:
+SocialMedia_follower_views=Number(prompt("Enter the view on social media"));
+     view=['small', 'Moderate', 'Huge'];//console.log(typeof SocialMedia_follower_views==true)
+//console.log(parseInt(SocialMedia_follower_views))
+if(-`${SocialMedia_follower_views}`)// if a number it produce result else nothing happen
+    {if( SocialMedia_follower_views<10)
+      {console.log("Social Media views is "+view[0]);}
+     else if( SocialMedia_follower_views<100)
+       {console.log("Social Media views is " +view[1]);}
+a     else {console.log("Social Media views is "+view[2]);}
+    }
+
+
+
+           
+
+
+           
+?Solve : Using loop find 2 raised to power to  10 and later write is short version with no loop?
+
+           var answer=1;
+delta=2
+for (i=0;i<=9;i++)
+{
+  answer*=delta;
+}
+console.log(answer);
+console.log(2**10);// short version
+
+
+
+?Boolean games dicovered?
+/*double exclamation can change   state of boolen values while preserving variable originality.*/
+highTemp="true" ; lowTemp="talse"; 
+console.log(!!highTemp);// produce false
+console.log(!highTemp); // does not produce false in this state but 'true'
+
+console.log*(!!lowTemp)// produce true
+console.log(!lowTemp)// produce  still false 
+u
+
+/* implementing use highTemp and lowTemp in application*/
+if(highTemp==true &&lowTemp==true){comsole.log("Is hot and temperature is increasing. Please exit this area");}
+else if(lowTemp==false  &&!!highTemp==false){console.log("Cooling .Please if condition is bad exit");}
+
+>>>>>>> 1767ea0559dd8102363d7b9464ccc608d383cf5d
+
+
+===>
+
+
+
+/*Problem solution: deleting bug [which I see it as precious gold] and adding parseInt to code to refine it.
+console.log("Welcome to the tip calculator.");*/
+
+/*
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+total_bill=parseInt(total_bill);
+ var each_pays=total_bill+[total_bill*12/100] ;/*total_bill=total_bill+1.12 ==>1.12 mean 100 percent plus 12 percen*/
+ 
+console.log("Each person should pay :$"+each_pays);/*Square can give error when in calculation.Smart up or eye up.
+*/
+
+
+
+/*Work cool but need more refactoring*/
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+total_bill=parseInt(total_bill);
+ var each_pays=(total_bill)+(total_bill*12/100) ;/*total_bill=total_bill+1.12 ==>1.12 mean 100 percent plus 12 percen*/
+console.log("Each person should pay :$"+each_pays);
+
+
+
+
+/*Using user percentage to calculate total bill.*/
+total_bill=prompt("What is the total bill for the food?");
+console.log("Total Bill:$"+total_bill);
+var _share_bill=prompt("How many people do  want share bill among");
+var percentage_share=prompt(" What percentage tip   would you like to give?, is it 12 , 14 or 15");
+total_bill=parseInt(total_bill);
+ var each_pays=total_bill+(total_bill*percentage_share/100) ;
+ 
+console.log("Each person should pay :$"+each_pays);
+
+
+/*Optional Argument:means not force in my sense*/
+function square_num(x){
+ return x*x;}
+square_num(4,false);
+
+/*Optional argument accept argument but the fumction after the call pick what it needs out of a range of argument.*/
+
+/*Do create more optional argument.Fun.Hmm,more optional argument ,too much is good */
+function save_doc(name,type,location,date){
+ console.log("File name:"+name+"."+type);}
+
+save_doc('Kwaku','pi');
+save_doc('Kwaku','mi');
+save_doc('Emo','xz')
+
+/*User can save any name for their file/*
+**To be continued...
+ function save_doc(name,type,location,date){
+ console.log("File name:"+name+"."+type);}
+
+/*accept user input */
+var name = prompt("Enter file name");
+var type = prompt("Enter file type");
+save_doc(name,type);
+
+/*The optional Argument takes or look at parameter and argument if it matches what there all have in common and use it to work in function.Those that have no values assigned them carry undefined values.*/
+
+function centimeter_to_meter(centi_data){
+console.log("Argument given to the function has "+centi_data+" value");
+result=centi_data*100;
+console.log("Answer:"+result);
+}
+
+centimeter_to_meter()/*	No argument is passed here meaning the function to be called will carry undefined and pass it to the function */
+
+/*function call minus*/
+function minus(a,b){
+if(b===undefined) return -a;
+else return a-b;   }
+
+/*calling the minus function*/
+console.log(minus(3));
+console.log(minus(5,7))
+/*remove comment to test code       minus(5,3);console.log(minus(5,7));*/
+
+
+/*Wonders of JS ,listen when argument is given then intend parameter assignment work not but when is not given intend parameter assignment work eg power in the code below:
+*/
+
+function square_num(base,power=2/*If the power is passed as argument the power=2 will be replaced by the argument .If not argument is given then the power becomes two*/ ){
+
+return "Answer:"+(base**power);
+
+}
+
+console.log(square_num(2));
+/*without power argument for function hence the default power will be 2*/
+
+console.log(square_num(2,3));
+/*It has a power argument passed as 3 so it replace the default 2 .Take over it and give an answer of 8*/
+
+
+/*No magic on console.log function*/
+console.log("C","O",2);
+
+
+console.log("Lim","=",5);
+
+/*User feels happy,  programmers are happy.Make  a nice compound*/
+var chemical_symbol=prompt("Enter chemical symbol of metal.");
+valency=prompt("What is the valency of"+chemical_symbol);
+console.log(chemical_symbol,"1","Cl",valency);
+
+
+Closure:
+function show(data){
+let local=data;
+return () => local;}
+
+try1=show(1);
+console.log(try1());
+
+
+/*New  closure*/
+function register (name){
+  let wel="Welcome to City Boys Academy";
+  let success="Registration is successfully.";
+  let identity=name;
+  return ()=> wel+"\n"+identity+"!\n"+success;
+ }
+
+doReg1=register("Nana");
+console.log(doReg1())
+doReg2=register("Kantanka");
+console.log(doReg2());
+ 
+
+
+
+/*Loan Algorithm using closure:Algorithm can allow to select an option of any closure  */
+function loan_code(saving_balance,no_of_month_saved,age){
+  if(saving_balance>1500&&no_of_month_saved>3)
+{  
+    Loan_Amount=0.50*savings*no_of_month_saved;
+
+}  
+  
+else 
+{ console.log("You don't qualify");}
+
+
+}
+
+
+loan_code(500,6,18);
+
+
+/* Loan Code on going .Hello World!*/
+function loan_code(no_of_month_saved,age){
+ customer={
+     id: [00,01,02,03]
+     name:['Meshach','Sandy','Queen'],
+     saving_balance:[0,11,02,03];
+     password:['v5$//','<<op','yyu','t565']
+
+          }
+ /*any data is compared with the records to verify and authenticate he or she is user in our sytem.*/
+ xid=prompt("Enter id");
+ xpass=prompt("Enter password");
+ 
+for(i=0;i<customer.name.length;i++)
+{
+ 
+     conditionid=if(xid===customer.id[xid])?True:False;
+     conditionpass=if(xpass===customer.pass[xid])?True:False;
+  console.log(conditionid);
+     
+ if(saving_balance[xid]>1500&&no_of_month_saved>3)
+{  
+    Loan_Amount=0.50*savings*no_of_month_saved;
+
+}  
+  
+else 
+{ console.log("You don't qualify");}
+
+
+}:}
+
+
+/*Current code upgrade loan_code*/
+function loan_code(no_of_month_saved,age){
+ customer={
+     id: [0,1,2,03],
+     name:['Meshach','Sandy','Queen'],
+     saving_balance:[0,11,02,03],
+     password:['v5','<<op','yyu','t565']
+
+          }
+ /*comment:any data is compared with the records to verify and authenticate he or she is user in our sytem.*/
+ xid=Number(prompt("Enter id"));
+ xpass=prompt("Enter password");
+ 
+
+ 
+     conditionid=(xid===customer.id[xid])?true:false;
+     /*conditionpass=if(xpass===customer.pass[xi])?True:False;*/
+ console.log(conditionid);
+     
+/* if(saving_balance[xid]>1500&&no_of_month_saved>3)
+{  
+    Loan_Amount=0.50*savings*no_of_month_saved;
+
+}  
+  
+else 
+{ console.log("You don't qualify");}
+
+*/
+ ;} loan_code(5,18)      
+
+
+/*Loan code Refactoring is done  :what has changed is quite tricky to see unless you have already learnt well*/
+function loan_code(no_of_month_saved,age){
+ customer={
+     id: [0,1,2,03],
+     name:['Meshach','Sandy','Queen'],
+     saving_balance:[34045,22701,02,03],
+     password:['v5','<<op','yyu','t565']
+
+          }
+ /*comment:any data is compared with the records to verify and authenticate he or she is user in our sytem.*/
+ xid=Number(prompt("Enter id"));
+ xpass=prompt("Enter password");
+ 
+
+ 
+     conditionid=(xid===customer.id[xid])?true:false;
+     conditionpass=(xpass===customer.password[xid])?true:false;
+ console.log(conditionid);console.log(conditionpass);
+     
+ if(customer.saving_balance[xid]>1500&&no_of_month_saved>3&&conditionid===true&&conditionpass===true&&age>=18)
+{  
+    Loan_Amount=0.10*customer.saving_balance[xid]*no_of_month_saved;
+     console.log(Loan_Amount);
+}  
+  
+else if(age<18){ console.log("Age is less than the age limit");}
+
+else if (conditionid!==true){ console.log("Incorrect ID is entered");}
+
+else if (conditionpass!==true){console.log("Incorrect password is entered");}
+else 
+{ console.log("Please balance is less.You don't qualify");}
+
+
+ ;} loan_code(35,45)
+
+
+
+/*Closure creation*/
+function bringComma(Name){
+   console.log(Name.length);
+   
+/*take last three character in Meshach and display comma before the 3 characters*/
+ console.log(Name[4-7]);
+
+}
+start =bringComma("Meshach")
+
+/*Code of closure  :another way of doing closure */
+function multiplier(factor){
+  console.log("factor is:"+factor);
+  console.log("num is: "+num);
+ return  num=> num*factor;}
+
+twice=multiplier(2);
+console.log(twice(3));
+
+/*Note when any function is called an environment is created. when twice is called or invoked it's parameter will num which exist as  3 in thin air and then multiplier will be called right after  and it will parameter of 3 .When the multiplied it result in or bring an answer of : 6 .When called, the function body sees
+the environment in which it was created, not the environment in which it is
+called.
+In the example, multiplier is called and creates an environment in which its
+factor parameter is bound to 2. The function value it returns, which is stored
+in twice, remembers this environment. So when that is called, it multiplies its
+argument by 2.
+*/
+
+
+/*Magic closure*/
+function magic(spell){
+return doz=>doz+spell);
+}
+call_magic=magic("Meshach!");
+console.log(call_magic("It is magic."));
+
+/*Closure code:*/
+
+function power(exponent){
+return base =>base**exponent;
+}
+
+var base =prompt("Enter  your base");
+var exponent=prompt("Enter exponent");
+ 
+solve=power(exponent)
+console.log(solve(base));
+
+/*Look: the code is called or invoked .We used solve to call mirror of function[ of power function]
+ and it keep base in a state  and later progress to use power(exponent) to call function  in mirror of function in a particular form by keeping exponent .It later perform ==>base raised to the exponent and return answers.*/
+
+
+/*coding closure*/
+function multiplier(factor) {
+return number => number ;
+}
+let twice = multiplier(2);
+console.log(twice(5));
+
+
+/*closure :*/
+function select(input){
+return data=>data;
+}
+
+ just=select(4);
+ console.log(just(3));
+ /*just(2): comment*/;
+
+
+
+Recursion:
+function power(base ,exponent){
+if(exponent===0)
+{ return 1;}
+else 
+{ return base*power(base,exponent-1);}
+                             }
+console.log(power(2,4));
+
+
+/*The code or function is called several time hence recursion ,when is called then the base is multiplied with the other and is stored in a virtual space .The code immediately stop when exponent ===0;
+
+
+Closure which returns a an argument passed even if there is no parameter pre installed  for the function.
+function multiplier() {
+return number => number ;
+}
+let twice = multiplier();
+console.log(twice(5));
+/*Output: 5*/
+
+Even though two is passed in a multiplier but it will do anything since is not returned by what will show in this code is 5 only.
+function multiplier() {
+return number => number ;
+}
+let twice = multiplier(2);
+console.log(twice(5));
+
+/*Output:5*/
+function power(base, exponent) {
+if (exponent == 0) { console.log("Iam part of it");
+return 1;
+} else {console.log("Delta is "+delta);
+return base * power(base, delta=exponent - 1);
+}
+}
+console.log(power(2, 3));
+
+/*Output:
+Delta is 0
+Delta is 2
+Delta is 1
+Iam part of it
+ 8
+*/
+The program immediately above execute three times .
+Meaning when it started delta was zero in the beginning 
+,then later the else statement started working hence delta=exponent-1
+eg delta=3-1=2
+   later delta=2-1=1
+ but To get answer, is like this :when the function start working ,every time function is continuously recurring ,the base is kept  for three times in an unknown room  ,so it will be like [2*2*2]=8
+/Recursion Code:*/
+function findSolution(target) {
+  function find(current, history) {
+  if (current == target) {
+  return history;
+  } else if (current > target) {
+  return null;
+  } else {
+  return find(current + 5, `(${history} + 5)`) ||
+  find(current * 3, `(${history} * 3)`);
+  }
+   }
+  return find(1, "1");
+
+}
+console.log(findSolution(24));
+/Trivial and understaning is shallow but l like the word but .... that turn statement to our favour.The code later came with understanding when I look to understanding each part of program.Looking at the code  by understanding each component is character of a good programmer.*/
+
+
+Clear light is forming in the code :
+function findSolution(target) {
+function find(current, history) { console.log(current);
+if (current == target) {
+return history;
+} else if (current > target) { console.log("It passed chere");
+return null;
+} else { ;
+return find(current + 5, `(${history} + 5)`) ||
+find(current * 3, `(${history} * 3)`)||console.log("Pes"+current);
+}
+}
+return find(2, "1");
+}
+console.log(findSolution(24))
+
+/*Clearing the fog:
+2
+2+5=7
+7+5=12
+12+5=17
+17+5=22
+22+7=29
+29 is greater than than target 24 ,Code Remembers only 22 
+22*3=66
+66 is huge than target 24 ,it returns 
+back forth from 22 to 17.
+17*3=51
+51 is huge than target 24 so it return ,from 17 it goes back to 12.
+12*6=36
+We all know 36 is way massive than target 24,so it get back from 12 to 7.
+7*3=21 
+Since 21  is less than 24 it try adding 5 to 21.
+==>21+5=26.
+26 is bigger than 24, so fall to  21.
+21*3=63.
+Later from 21 which was used it fall back to 7  
+
+Nothing happen when is at 7 later it fall back to 2 .
+2*3= 6
+
+
+It restart again:
+6+5=11
+11+5=16
+16+5=21
+21+5=26
+
+26 is huge than 24 ,so it fall back from or retrace it steps from 26 to or back to 21.
+21*3=63.
+When that is done ,the algorithm retrace seeing that 63 is greater than 63 ,it falls from 21 to 16.
+Hence ,16*3=48.
+
+48 is bigger than 24 ,hence it clean 48  into a thin air and later move from 16 which in memory and jump to 11.
+11*33=33.
+ 
+33 is bigger than 24 ,hence it clean 33 into a thin air and later move from  11 to 6.
+6*3=18.
+
+
+Restart : 18 is less than 24 
+Hence 18+5=23.
+
+We confirm with our mind and heart ,23 is less than target 24, hence algorithm will add 5 to 23 making it 28.
+23+5=28.
+
+28 is greater than 24 ,so clean 28 into the thin air ,leaving  only 23 in the memory .
+It multiply 23 and 3 together.
+23*3=29.
+
+29 is way vast than 24 which the target in this code.
+29 is clean  into thin air leaving  18 in memory.
+18  is multiplied with 3 giving 54.
+18*3=54.
+   
+
+Leaving 54 which is clean into the air ,it move from 18 to 6, then it moves from 6  to 2 .
+
+*/
+
+/*Write function that takes 
+Records of animal in a farm!
+Eg:
+007 Cow
+011 Chicken
+/*coding the function to do that*/
+code :
+function printFarmInventory(cows, chickens) {
+let cowString = String(cows);
+while (cowString.length < 3) {
+cowString = "0" + cowString;
+}
+console.log(`${cowString} Cows`);
+let chickenString = String(chickens);
+while (chickenString.length < 3) {
+chickenString = "0" + chickenString;
+}
+console.log(`${chickenString} Chickens`);
+}
+printFarmInventory(7, 11)
+
+
+
+/*
+
+
+
+function Farm_Animal_Record(cows,chicken){
+let cowString=String(cows);
+while(cowString.length<3)
+{cowString="0"+cowString;}
+console.log(cowstring);
+}
+
+Farm_Animal_Record(4,3)
+
+
+
+
+/*Practice on adding zero before a num which is has length less 3*/
+function Farm_Animals_Records( chicken){
+let  chickenString=String(chicken);
+   while(chickenString.length<3)
+   { chickenString="0"+chickenString;}
+ console.log(chickenString);
+ }
+
+Farm_Animals_Records(1);
+
+
+/*Coding more .Keep going!*/
+function Animal_Record(cow,chicken){
+ let chickenString=String(chicken);
+  while(chickenString.length<3)
+  { chickenString="0"+chickenString;}
+   console.log(chickenString);
+  }
+Animal_Record(5,6);
+
+
+
+
+
+/*Write function that takes 
+Records of animal in a farm!
+Eg:
+007 Cow
+011 Chicken
+/*coding the function to do that*/
+code :
+function printFarmInventory(cows, chickens) {
+let cowString = String(cows);
+while (cowString.length < 3) {
+cowString = "0" + cowString;
+}
+console.log(`${cowString} Cows`);
+let chickenString = String(chickens);
+while (chickenString.length < 3) {
+chickenString = "0" + chickenString;
+}
+console.log(`${chickenString} Chickens`);
+}
+printFarmInventory(7, 11)
+
+
+/*Farm code: */
+function FarmInventory(cow,chicken){
+ cowString=String(cow);
+ if(cowString<3)
+ {cowString="0"+cowString;}
+ console.log(cowString);
+       chickenString=String(chicken);
+ 
+  if(chickenString<3);
+{chickenString="0"+chickenString;}
+ console.log(chickenString);
+}
+
+FarmInventory(2,4);
+
+
+/*Growing function :
+Which is optimized to accept a number of animals of in the farm inventory records*/
+
+/*Zero_Print_Number_Label function  parameter carry number  and name or label of each organism.It will be called by a function farm_inventory  which has an argument of taking the quantity of each animal and passing it to  farm_inventory ,then the function Farm_Inventory work will call function Zero_Print_Number_Label (number,"label") */
+
+function Zero_Print_Number_Label(number,label){
+   numberString=String(number);
+   while(numberString<3)
+   { numberString="0"+numberString;}
+   console.log(numberString+""+label);
+   }
+
+function Farm_Inventory(no_ofCow,no_ofChicken,no_ofPig){
+  /*Zero_Print_Number_Label(number,label)*/
+  Zero_Print_Number_Label(no_ofCow,"Cow");
+  Zero_Print_Number_Label(no_ofChicken,"Chicken");
+  Zero_Print_Number_Label(no_ofPig,"Pig");}
+
+Farm_Inventory(3,5,9);
+
+
+
+/	Refactoring Code :Zero need to show before the quantity of each organism*/
+function Zero_Print_Number_Label(number,label){
+   numberString=String(number);
+   while(numberString.length<3)
+   { numberString="0"+numberString;}
+   /*You can uncomment the code below:*/
+   /*console.log(`${numberString} ${label}`)*/
+   console.log(numberString+" "+label);
+   }
+
+function Farm_Inventory(no_ofCow,no_ofChicken,no_ofPig){
+  /*Zero_Print_Number_Label(number,label)*/
+  Zero_Print_Number_Label(no_ofCow,"Cow");
+  Zero_Print_Number_Label(no_ofChicken,"Chicken");
+  Zero_Print_Number_Label(no_ofPig,"Pig");}
+
+Farm_Inventory(3,5,9);
+
+/*Refactoring the growing function*/
+function Zero_Inclusion(number,limit){
+  let  To_String=String(number);
+   while(number.length<limit)
+   { To_String="0"+To_String;}
+   
+    return To_String;
+  
+}
+
+
+
+function  farm_inventory(no_ofChicken,no_ofCow,no_ofPig){
+  console.log(`${Zero_Inclusion(no_ofChicken,3)} Chicken[s]`);
+  console.log(`${Zero_Inclusion(no_ofCow,3)} Cow[s]`);
+  console.log(`${Zero_Inclusion(no_ofPig,3)} Pi[s]`);
+}
+
+farm_inventory(4,6,7)
+
+/*The code start beneath with  farm_inventory(4,6,7)
+ and call the farm_inventory which has another function call Zero_Inclusion function ,when the function is called ,it will work well .
+Eg if it call  console.log(`${Zero_Inclusion(no_ofChicken,3)} Chicken[s]`)
+then the Zero_Inclusion function having curly bracket at the same time within the curly bracket will return
+an output of : 004  and later when function finish working then console .log will later print '  Chicken[s]
+Hence the final output
+/OUTPUT/
+eg:
+004 Chicken[s]
+
+*/
+
+
+/*Growing Function refactoring at farm inventory */
+function Zero_Inclusion(number,width){
+/*Converting a number to String*/
+  
+ To_String=String(number);
+  
+  while(To_String.length<width)
+  {To_String="0"+To_String;}
+ 
+  return To_String;
+}
+
+
+function farm_inventory(no_ofChicken,no_ofCow,no_ofPig)
+{ console.log(`${Zero_Inclusion(no_ofChicken,3)} Chicken`+`\n${Zero_Inclusion(no_ofCow,3)} Cow`+`\n${Zero_Inclusion(no_ofPig,3)} Pig`);
+}
+        farm_inventory(2,3,5)
+
+
+
+
+
+/*Growing function */
+
+function Zero_Inclusion(number,width){
+/*Converting a number to String*/
+  
+ To_String=String(number);
+  
+  while(To_String.length<width)
+  {To_String="0"+To_String;}
+ 
+  return To_String;
+}
+
+
+function farm_inventory(no_ofChicken,no_ofCow,no_ofPig)
+{ return '${no_ofChicken,3} Chicken','${no_ofCow,3} Cow','${no_ofPig,3} Pig' 
+}
+        farm_inventory(2,3,5)
+
+
+
+
+/*Grwoing fucntion in the my balcony */
+function Zero_Inclusion(number,width){
+/*Converting a unknown type  to String*/
+  
+ To_String=String(number);
+  
+  while(To_String.length<width)
+  {To_String="0"+To_String;}
+ 
+  return To_String;
+}
+
+
+function farm_inventory(no_ofChicken,no_ofCow,no_ofPig) { return   ` ${Zero_Inclusion(no_ofChicken,3)} Chicken` +                         
+          `,${Zero_Inclusion(no_ofCow,3)} Cow`+                                                                                                                       
+          `,${Zero_Inclusion(no_ofPig,3)} Pig`;                                
+}
+        farm_inventory(2,3,5)
+  
+/*Growing function in my nicely hmm house*/
+function Zero_Inclusion(number){
+/*Converting a unknown type  to String*/
+  const width=3; 
+ To_String=String(number);
+  
+  while(To_String.length<width)
+  {To_String="0"+To_String;}
+ 
+  return To_String;
+}
+
+
+function farm_inventory(no_ofChicken,no_ofCow,no_ofPig) {  number=[no_ofchicken,no_ofCow,no_ofPig];
+   label= ['Chicken','Cow','Pig'];let i=0;
+   do{
+   console.log(Zero_Inclusion(number));i++;
+    }
+ while(i!=3);}
+function(2,3,5)
+
+}
+
+
+        farm_inventory(2,3,5)   
+
+
+
+
+
+
+
+Zero_Inclusion(number){
+/*Converting a unknown type  to String*/
+  const width=3; 
+ To_String=String(number);
+  
+  while(To_String.length<width)
+  {To_String="0"+To_String;}
+ 
+  return To_String;
+}
+
+
+function farm_inventory(no_ofChicken,no_ofCow,no_ofPig) {  number=[no_ofChicken,no_ofCow,no_ofPig];
+   label= ['Chicken','Cow','Pig'];let i=0;
+   do{
+
+   if(i==2){log(Zero_Inclusion(number));};i++;
+    }
+ while(i!==2 );}
+farm_inventory(2,3,5)
+
